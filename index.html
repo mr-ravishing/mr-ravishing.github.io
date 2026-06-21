@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Singh — Physics Researcher</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Space+Grotesk:wght@300;400;500&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --gold:  #c9a84c;
+            --text:  #ddd8ca;
+            --muted: rgba(221,216,202,.6);
+            --bg:    #030303;
+            --rule:  rgba(255,255,255,.05);
+            --card-border: rgba(201,168,76,.13);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 300;
+            cursor: none;
+            overflow-x: hidden;
+        }
+
+        /* ── Custom Cursor ─────────────────────────────────────────── */
+        #cursor {
+            position: fixed; width: 7px; height: 7px;
+            background: var(--gold); border-radius: 50%;
+            pointer-events: none; z-index: 10000;
+            transform: translate(-50%,-50%);
+        }
+        #cursor-ring {
+            position: fixed; width: 30px; height: 30px;
+            border: 1px solid rgba(201,168,76,.46); border-radius: 50%;
+            pointer-events: none; z-index: 9999;
+            transform: translate(-50%,-50%);
+            transition: left .1s ease, top .1s ease,
+                        width .25s ease, height .25s ease, opacity .25s ease;
+        }
+        #cursor-ring.big { width: 56px; height: 56px; opacity: .32; }
+
+        /* ── Spacetime lattice canvas ──────────────────────────────── */
+        #spacetime {
+            position: fixed; inset: 0;
+            width: 100%; height: 100%;
+            z-index: 0; pointer-events: none;
+        }
+
+        /* ── Page shell ────────────────────────────────────────────── */
+        .page { position: relative; z-index: 1; }
+
+        /* ── Header ────────────────────────────────────────────────── */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 42px 68px;
+        }
+
+        .site-id {
+            font-size: .69rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            line-height: 2;
+            color: var(--text);
+        }
+
+        nav {
+            display: flex;
+            gap: 44px;
+            padding-top: 4px;
+        }
+
+        nav a {
+            font-size: .63rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--text);
+            text-decoration: none;
+            opacity: .7;
+            transition: opacity .2s, color .2s;
+        }
+        nav a:hover { opacity: 1; color: var(--gold); }
+
+        /* ── Hero ──────────────────────────────────────────────────── */
+        .hero {
+            display: grid;
+            grid-template-columns: 56fr 44fr;
+            align-items: center;
+            min-height: calc(100vh - 136px);
+            padding: 0 68px 88px;
+            gap: 48px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 38px;
+        }
+        .eyebrow::before {
+            content: '';
+            width: 38px; height: 1px;
+            background: var(--gold);
+            flex-shrink: 0;
+        }
+        .eyebrow span {
+            font-size: .62rem;
+            letter-spacing: .21em;
+            text-transform: uppercase;
+            opacity: .6;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(2.9rem, 5.4vw, 5.1rem);
+            font-weight: 300;
+            line-height: 1.065;
+            letter-spacing: -.015em;
+            margin-bottom: 38px;
+        }
+        h1 em {
+            font-: italic;
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        .hero-desc {
+            font-size: .82rem;
+            line-height: 1.92;
+            color: var(--muted);
+            max-width: 450px;
+        }
+
+        /* ── Black hole canvas (hero visual) ───────────────────────── */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bh-canvas {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* ── Content sections ──────────────────────────────────────── */
+        .section {
+            padding: 84px 68px;
+            border-top: 1px solid var(--rule);
+        }
+
+        .stag {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 52px;
+        }
+        .stag::before {
+            content: '';
+            width: 36px; height: 1px;
+            background: var(--gold);
+        }
+        .stag span {
+            font-size: .62rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* ── Research cards ────────────────────────────────────────── */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            border: 1px solid var(--card-border);
+        }
+
+        .card {
+            padding: 30px 28px;
+            border-right: 1px solid var(--card-border);
+            transition: background .3s;
+        }
+        .card:last-child { border-right: none; }
+        .card:hover { background: rgba(201,168,76,.04); }
+
+        .card-n {
+            font-size: .55rem;
+            letter-spacing: .14em;
+            color: var(--gold);
+            opacity: .48;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.22rem;
+            font-weight: 400;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .card p {
+            font-size: .76rem;
+            line-height: 1.9;
+            color: var(--muted);
+        }
+
+        /* ── Prose ─────────────────────────────────────────────────── */
+        .prose {
+            font-size: .88rem;
+            line-height: 2.1;
+            color: var(--muted);
+            max-width: 620px;
+        }
+
+        /* ── Interest pills ────────────────────────────────────────── */
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 700px;
+        }
+
+        .pill {
+            font-size: .6rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            padding: 9px 17px;
+            border: 1px solid rgba(201,168,76,.18);
+            color: var(--text);
+            opacity: .68;
+            transition: border-color .25s, opacity .25s;
+        }
+        .pill:hover { border-color: rgba(201,168,76,.55); opacity: 1; }
+
+        /* ── Footer ────────────────────────────────────────────────── */
+        footer {
+            padding: 30px 68px;
+            border-top: 1px solid var(--rule);
+            text-align: center;
+            font-size: .6rem;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            opacity: .28;
+        }
+
+        /* ── Responsive ────────────────────────────────────────────── */
+        @media (max-width: 860px) {
+            header  { padding: 28px 28px; }
+            nav     { gap: 22px; }
+            .hero   { grid-template-columns: 1fr; padding: 28px 28px 64px; gap: 48px; }
+            .hero-visual { order: -1; }
+            .section { padding: 60px 28px; }
+            .cards  { grid-template-columns: 1fr; }
+            .card   { border-right: none; border-bottom: 1px solid var(--card-border); }
+            .card:last-child { border-bottom: none; }
+            footer  { padding: 24px 28px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Cursor elements -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Spacetime lattice canvas (fixed, behind everything) -->
+<canvas id="spacetime"></canvas>
+
+<div class="page">
+
+    <header>
+        <div class="site-id">
+            Ravi Singh<br>
+            Theoretical Physics<br>
+            Gravity &middot; QFT &middot; Superfluids &middot; Machine Learning<br>
+            IIT-ISM Dhanbad
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#interests">Publications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <div class="eyebrow">
+                <span>Gravitational &amp; High-Energy Physics</span>
+            </div>
+            <h1>
+                Sculpting<br>
+                <em>spacetime</em><br>
+                at the horizon
+            </h1>
+            <p class="hero-desc">
+                I work at the intersection of gravitational physics, quantum field theory,
+                and superfluid dynamics — exploring Carrollian symmetries on black hole horizons,
+                analog gravity in superfluid &#8308;He, and emergent phenomena through holography &amp; AI-ML assisted approaches.
+            </p>
+        </div>
+        <div class="hero-visual">
+            <!-- Procedural analog-gravity / black hole visualization -->
+            <canvas id="bh-canvas" width="420" height="420"></canvas>
+        </div>
+    </section>
+
+        <!-- About -->
+    <section class="section" id="about">
+        <div class="stag"><span>About</span></div>
+        <p class="prose">
+            I am a physics researcher working at the frontier of gravitational physics,
+            quantum field theory, and the physics of quantum fluids. My research probes
+            fundamental structures of spacetime and emergent phenomena, with particular
+            interest in the deep connections between gravity, hydrodynamics, and quantum mechanics.
+        </p>
+    </section>
+
+    
+    <!-- Research -->
+    <section class="section" id="research">
+        <div class="stag"><span>Current Research</span></div>
+        <div class="cards">
+          
+            <div class="card">
+                <p class="card-n">02</p>
+                <h3>Superfluid Analog Gravity</h3>
+                <p>Acoustic black holes and emergent spacetime in superfluid &#8308;He — connecting phonon attenuation physics to Hawking radiation analogues.</p>
+            </div>
+              <div class="card">
+                <p class="card-n">01</p>
+                <h3> Holography  </h3>
+                <p>Field theory on black hole horizons via Carrollian symmetry — ultrarelativistic limits and holographic dualities on null boundaries. Holographic Error Correcting Codes.</p>
+            </div>
+           
+            <div class="card">
+                <p class="card-n">04</p>
+                <h3>Quantum Fluids</h3>
+                <p>Simulations of dynamics of Bose–Einstein condensates and Fermi Liquids. </p>
+            </div>
+              <div class="card">
+                <p class="card-n">03</p>
+                <h3>Machine Learning </h3>
+                <p> ML-assisted detection schemes for fundamental physics </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Interests -->
+    <section class="section" id="interests">
+        <div class="stag"><span>Research Interests</span></div>
+        <div class="pills">
+            <span class="pill">General Relativity</span>
+            <span class="pill">Quantum Field Theory</span>
+            <span class="pill">String Theory</span>
+            <span class="pill">Fluid Dynamics</span>
+            <span class="pill">Analog Gravity</span>
+            <span class="pill">Holography</span>
+            <span class="pill">Superfluids &#8308;He</span>
+            <span class="pill">Carrollian Symmetry</span>
+            <span class="pill">Effective Field Theory</span>
+        </div>
+    </section>
+
+          <!-- Publications -->
+    <section class="section" id="Publications">
+        <div class="stag"><span>Publications</span></div>
+        <p class="prose">
+           Publications will appear here.
+        </p>
+    </section>
+
+      <!-- Contact -->
+
+
+
+<!---    <section class="contact" id="contact">
+    <div>
+      <h2>Get in touch</h2>
+      <p style="color: var(--dim); margin-top: 0.8rem; font-size: 0.92rem; line-height: 1.7;">
+        Open to collaborations.
+      </p>
+    </div>
+    <div class="contact-list">
+      <div class="contact-item">
+        <span class="k">Email</span>
+        <a href="mailto:mr.ravishing100@gmail.com">mr.ravishing100@gmail.com</a>
+      </div>
+     
+      <div class="contact-item">
+        <span class="k">LinkedIn</span>
+        <a href="https://in.linkedin.com/in/mravishing" target="_blank" rel="noopener">Ravi Singh</a>
+      </div>
+      <div class="contact-item">
+        <span class="k">Based in</span>
+        <span>Dhanbad, India</span>
+      </div>
+    </div>
+  </section> -->
+
+     <!-- ── Contact ───────────────────────────────────────── -->
+    <section class="contact-section" id="contact">
+        <div class="contact-grid">
+
+            <!-- Left: heading + description -->
+            <div>
+                <h2 class="contact-heading">Get in touch</h2>
+                <p class="contact-desc">
+                    Open to collaborations, student enquiries,<br>
+                    and seminar invitations. Working on<br>
+                    Carrollian symmetry, analog gravity,<br>
+                    or holography? Let's talk.
+                </p>
+            </div>
+
+            <!-- Middle: email + linkedin -->
+            <div>
+                <div class="contact-item">
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:your@email.com" class="contact-link">your@email.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">your-profile</a>
+                </div>
+            </div>
+
+            <!-- Right: institution + location -->
+            <div>
+                <div class="contact-item">
+                    <span class="contact-label">Institution (Legacy)</span>
+                    <a href="mailto:your@institution.ac.in" class="contact-link">your@institution.ac.in</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Based in</span>
+                    <span class="contact-plain">Jamshedpur, India</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ravi Singh &nbsp;&middot;&nbsp; Theoretical Physics</p>
+    </footer>
+
+    
+</div><!-- /.page -->
+
+<script>
+// ─────────────────────────────────────────────────────────────
+//  CUSTOM CURSOR
+// ─────────────────────────────────────────────────────────────
+const cur  = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx = -500, my = -500;
+
+document.addEventListener('mousemove', e => {
+    mx = e.clientX;  my = e.clientY;
+    cur.style.left  = mx + 'px';
+    cur.style.top   = my + 'px';
+    ring.style.left = mx + 'px';
+    ring.style.top  = my + 'px';
+});
+
+document.querySelectorAll('a, .card, .pill').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('big'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('big'));
+});
+
+
+// ─────────────────────────────────────────────────────────────
+//  SPACETIME LATTICE
+// ─────────────────────────────────────────────────────────────
+const sc   = document.getElementById('spacetime');
+const sctx = sc.getContext('2d');
+const GR = 201, GG = 168, GB = 76;   // gold RGB
+const GRID = 76;    // grid spacing in px
+const RMAX = 190;   // cursor influence radius
+
+function resizeSC() {
+    sc.width  = window.innerWidth;
+    sc.height = window.innerHeight;
+}
+resizeSC();
+window.addEventListener('resize', resizeSC);
+
+function drawLattice() {
+    sctx.clearRect(0, 0, sc.width, sc.height);
+
+    const W = sc.width, H = sc.height;
+    // Offset grid so nodes aren't flush at the very edges
+    const ox = (W % GRID) * .5;
+    const oy = (H % GRID) * .5;
+    const cols = Math.ceil(W / GRID) + 2;
+    const rows = Math.ceil(H / GRID) + 2;
+
+    // ── Faint background grid lines ──
+    sctx.strokeStyle = 'rgba(185,175,155,.038)';
+    sctx.lineWidth   = .45;
+    for (let r = 0; r < rows; r++) {
+        const ny = oy + r * GRID;
+        sctx.beginPath();
+        sctx.moveTo(0, ny);
+        sctx.lineTo(W, ny);
+        sctx.stroke();
+    }
+    for (let c = 0; c < cols; c++) {
+        const nx = ox + c * GRID;
+        sctx.beginPath();
+        sctx.moveTo(nx, 0);
+        sctx.lineTo(nx, H);
+        sctx.stroke();
+    }
+
+    // ── Node connections to cursor ──
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+            const nx = ox + c * GRID;
+            const ny = oy + r * GRID;
+            const d  = Math.hypot(mx - nx, my - ny);
+
+            if (d < RMAX) {
+                const t  = 1 - d / RMAX;
+                const t2 = t * t;
+
+                // Line from node → cursor
+                sctx.beginPath();
+                sctx.moveTo(nx, ny);
+                sctx.lineTo(mx, my);
+                sctx.strokeStyle = `rgba(${GR},${GG},${GB},${(t2 * .23).toFixed(3)})`;
+                sctx.lineWidth   = t * .9;
+                sctx.stroke();
+
+                // Glowing node
+                sctx.beginPath();
+                sctx.arc(nx, ny, 1.3 + t * 1.6, 0, Math.PI * 2);
+                sctx.fillStyle = `rgba(${GR},${GG},${GB},${(.07 + t2 * .82).toFixed(3)})`;
+                sctx.fill();
+            } else {
+                // Dim background node
+                sctx.beginPath();
+                sctx.arc(nx, ny, .8, 0, Math.PI * 2);
+                sctx.fillStyle = 'rgba(200,190,170,.055)';
+                sctx.fill();
+            }
+        }
+    }
+
+    requestAnimationFrame(drawLattice);
+}
+drawLattice();
+
+
+// ─────────────────────────────────────────────────────────────
+//  BLACK HOLE / ANALOG GRAVITY VISUALIZATION
+//  Tilted Keplerian accretion disk with relativistic beaming
+// ─────────────────────────────────────────────────────────────
+const bhC   = document.getElementById('bh-canvas');
+const bhCtx = bhC.getContext('2d');
+
+// Initialise orbiting particles once
+const NPART = 65;
+const parts = Array.from({ length: NPART }, () => ({
+    frac:  .27 + Math.pow(Math.random(), .6) * .73,   // radial position
+    angle: Math.random() * Math.PI * 2,               // current orbital phase
+    alpha: .08 + Math.random() * .26,                 // base opacity
+}));
+
+function animateBH() {
+    const S    = bhC.width;
+    const cx   = S * .5,  cy = S * .5;
+    const R    = S * .44;           // outer disk radius
+    const EH   = R * .22;           // event horizon radius
+    const TILT = .32;               // disk inclination (b/a of the orbital ellipses)
+
+    bhCtx.clearRect(0, 0, S, S);
+
+    // ── Concentric orbital ellipses (disk structure) ──
+    for (let i = 1; i <= 55; i++) {
+        const f = i / 55;
+        const r = R * (.25 + .75 * f);
+        // Rings near ISCO are brightest
+        const innerGlow = f > .88 ? (f - .88) * 7 : 0;
+        const alpha = .013 + Math.pow(f, 2.2) * .08 + innerGlow * .12;
+
+        bhCtx.save();
+        bhCtx.translate(cx, cy);
+        bhCtx.beginPath();
+        bhCtx.ellipse(0, 0, r, r * TILT, 0, 0, Math.PI * 2);
+        bhCtx.strokeStyle = `rgba(201,168,76,${alpha.toFixed(3)})`;
+        bhCtx.lineWidth   = f > .88 ? 1.1 : .38;
+        bhCtx.stroke();
+        bhCtx.restore();
+    }
+
+    // ── Keplerian particles with relativistic beaming ──
+    for (const p of parts) {
+        // Keplerian angular velocity: ω ∝ r^{-3/2}
+        p.angle += Math.pow(1 / p.frac, 1.5) * .011;
+
+        const r  = p.frac * R;
+        const px = cx + r * Math.cos(p.angle);
+        const py = cy + r * TILT * Math.sin(p.angle);
+
+        // Relativistic beaming: material approaching observer (left side) appears brighter
+        const beam  = .55 + .65 * (-Math.cos(p.angle));
+        const front = Math.sin(p.angle) >= 0;   // front hemisphere
+        const alpha = Math.min(p.alpha * beam * (front ? 1 : .18), .92);
+
+        bhCtx.beginPath();
+        bhCtx.arc(px, py, 1.15, 0, Math.PI * 2);
+        bhCtx.fillStyle = `rgba(201,168,76,${alpha.toFixed(3)})`;
+        bhCtx.fill();
+    }
+
+    // ── Event horizon shadow ──
+    const sg = bhCtx.createRadialGradient(cx, cy, 0, cx, cy, EH * 2.45);
+    sg.addColorStop(0,    'rgb(3,3,3)');
+    sg.addColorStop(.52,  'rgb(3,3,3)');
+    sg.addColorStop(.76,  'rgba(3,3,3,.87)');
+    sg.addColorStop(1,    'rgba(3,3,3,0)');
+    bhCtx.beginPath();
+    bhCtx.arc(cx, cy, EH * 2.45, 0, Math.PI * 2);
+    bhCtx.fillStyle = sg;
+    bhCtx.fill();
+
+    // ── Photon sphere ring (bright ISCO glow) ──
+    bhCtx.save();
+    bhCtx.translate(cx, cy);
+    bhCtx.shadowColor = 'rgba(201,168,76,.6)';
+    bhCtx.shadowBlur  = 16;
+    bhCtx.beginPath();
+    bhCtx.ellipse(0, 0, EH * 1.55, EH * 1.55 * TILT, 0, 0, Math.PI * 2);
+    bhCtx.strokeStyle = 'rgba(201,168,76,.92)';
+    bhCtx.lineWidth   = 2.4;
+    bhCtx.stroke();
+    bhCtx.restore();
+
+    requestAnimationFrame(animateBH);
+}
+animateBH();
+</script>
+
+</body>
+</html>
