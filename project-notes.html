@@ -1,0 +1,1915 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>project-notes</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="project-notes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141D1A" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F8F9; --grid:#E0E8EC; --grid-major:#C9D6DC;
+  --chrome:#FFFFFF; --chrome-2:#EEF2F4; --line:#D6DEE2;
+  --text:#15202A; --muted:#566673;
+  --accent:#2346C8; --accent-ink:#FFFFFF; --accent-soft:#E5EAFB;
+  --red:#C8312A;
+  --ink0:#1A2230; --ink1:#2346C8; --ink2:#C8312A; --ink3:#1F7A4D;
+  --sheet-shadow:0 -10px 30px rgba(20,32,42,.14);
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  padding-left:env(safe-area-inset-left,0px);
+  padding-right:env(safe-area-inset-right,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1C2925; --grid:rgba(235,245,240,.055); --grid-major:rgba(235,245,240,.1);
+    --chrome:#141D1A; --chrome-2:#1B2622; --line:#2A3833;
+    --text:#E7EEEA; --muted:#97A8A0;
+    --accent:#93B0FF; --accent-ink:#0F1A3A; --accent-soft:#22305A;
+    --red:#FF8F84;
+    --ink0:#EEF3EF; --ink1:#9DB8FF; --ink2:#FF9B8F; --ink3:#8FD9A8;
+    --sheet-shadow:0 -10px 30px rgba(0,0,0,.45);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1C2925; --grid:rgba(235,245,240,.055); --grid-major:rgba(235,245,240,.1);
+  --chrome:#141D1A; --chrome-2:#1B2622; --line:#2A3833;
+  --text:#E7EEEA; --muted:#97A8A0;
+  --accent:#93B0FF; --accent-ink:#0F1A3A; --accent-soft:#22305A;
+  --red:#FF8F84;
+  --ink0:#EEF3EF; --ink1:#9DB8FF; --ink2:#FF9B8F; --ink3:#8FD9A8;
+  --sheet-shadow:0 -10px 30px rgba(0,0,0,.45);
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%;background:var(--chrome);scroll-padding-top:env(safe-area-inset-top,0px)}
+body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none;background:var(--chrome-2);color:var(--text);
+  font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.45;
+  -webkit-text-size-adjust:100%}
+button,input{font:inherit;color:inherit}
+button{touch-action:manipulation;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.app{display:grid;grid-template-rows:auto minmax(0,1fr);height:100%}
+
+/* Toolbar */
+.toolbar{display:flex;align-items:center;gap:4px;padding:8px 10px;background:var(--chrome);border-bottom:1px solid var(--line);
+  overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.toolbar::-webkit-scrollbar{display:none}
+.brand{font-weight:700;font-size:1.15rem;letter-spacing:-.01em;padding:0 10px 0 4px;white-space:nowrap}
+.grp{display:flex;align-items:center;gap:2px;padding:0 6px;border-left:1px solid var(--line);flex:none}
+.spacer{flex:1 1 8px;min-width:8px}
+.tb{width:40px;height:40px;display:grid;place-items:center;border:0;border-radius:10px;background:transparent;color:var(--text);flex:none}
+.tb svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tb:hover{background:var(--chrome-2)}
+.tb[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent)}
+.tb:disabled{opacity:.35;cursor:default;background:transparent}
+.tb.armed{background:var(--red);color:#fff}
+.swatch{width:34px;height:40px;border:0;background:transparent;display:grid;place-items:center;flex:none;border-radius:10px}
+.swatch span{width:20px;height:20px;border-radius:50%;background:var(--c);box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.swatch[aria-pressed="true"] span{box-shadow:0 0 0 2px var(--chrome),0 0 0 4px var(--c)}
+.size span{display:block;border-radius:50%;background:currentColor}
+.pglabel{min-width:52px;text-align:center;font-variant-numeric:tabular-nums;color:var(--muted);font-size:.92rem;white-space:nowrap}
+
+/* Main */
+.main{display:grid;grid-template-columns:minmax(240px,1fr) min(var(--pw,350px),calc(100% - 240px));min-height:0;position:relative}
+.board{position:relative;min-width:0;min-height:0;overflow:hidden;background-color:var(--paper);
+  background-image:
+    linear-gradient(var(--grid-major) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid-major) 1px,transparent 1px),
+    linear-gradient(var(--grid) 1px,transparent 1px),
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:120px 120px,120px 120px,24px 24px,24px 24px;
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#cv{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:crosshair}
+.board.erasing #cv{cursor:cell}
+.hint-empty{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);color:var(--muted);text-align:center;pointer-events:none;
+  font-size:1.05rem;max-width:32ch;opacity:.85}
+.hint-empty[hidden]{display:none}
+.totop{position:absolute;right:14px;bottom:14px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:var(--chrome);color:var(--text);display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.totop[hidden]{display:none}
+.totop svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Calculator panel */
+.panel{position:relative;display:flex;flex-direction:column;min-height:0;background:var(--chrome);border-left:1px solid var(--line)}
+.grip{position:absolute;z-index:6;touch-action:none;background:transparent}
+.grip::after{content:"";position:absolute;border-radius:3px;background:var(--line);transition:background .15s}
+.grip:hover::after,.grip.drag::after,.grip:focus-visible::after{background:var(--accent)}
+.grip:focus-visible{outline:none}
+.panel-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px 10px 8px 12px}
+.tabs{display:flex;gap:2px;background:var(--chrome-2);padding:3px;border-radius:10px}
+.tabs button{border:0;background:transparent;padding:6px 10px;border-radius:8px;font-weight:700;font-size:.9rem;color:var(--muted)}
+.tabs button[aria-selected="true"]{background:var(--chrome);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.14)}
+.view{display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+.view[hidden]{display:none}
+.fns{display:flex;flex-direction:column;gap:6px;padding:8px 12px;border-top:1px solid var(--line)}
+.fnrow{display:flex;align-items:center;gap:8px}
+.fnrow label{min-width:36px;font-weight:700;font-size:.92rem;color:var(--c);white-space:nowrap}
+.fnrow input{flex:1;min-width:0;height:38px;border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:0 10px;font-size:1rem}
+.fnrow input.bad{border-color:var(--red)}
+.fnrow button{width:32px;height:32px;flex:none;border:0;border-radius:8px;background:transparent;color:var(--muted);font-size:1.2rem;line-height:1}
+.fnrow button:hover{background:var(--chrome-2)}
+.plotwrap{position:relative;flex:1 1 auto;min-height:200px;border-top:1px solid var(--line);overflow:hidden}
+#plot{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+.plot-ctl{position:absolute;top:8px;right:8px;display:flex;flex-direction:column;gap:6px}
+.pc{width:36px;height:36px;display:grid;place-items:center;padding:0;border:1px solid var(--line);border-radius:9px;background:var(--chrome);color:var(--text);font-size:1.15rem;font-weight:700}
+.pc svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.trace{display:flex;flex-wrap:wrap;gap:4px 14px;padding:8px 14px 10px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted);min-height:40px;font-variant-numeric:tabular-nums}
+.trace .tv{color:var(--c,var(--muted));font-weight:700}
+.head-r{display:flex;align-items:center;gap:6px}
+.angle{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.angle button{border:0;background:transparent;padding:5px 11px;font-size:.88rem;color:var(--muted)}
+.angle button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);font-weight:700}
+.hist{flex:1 1 auto;min-height:60px;overflow:auto;padding:4px 10px 8px;border-top:1px solid var(--line);display:flex;flex-direction:column}
+.hist .empty{color:var(--muted);font-size:.92rem;padding:10px 6px;margin:auto 0 0}
+.h-item{display:block;width:100%;text-align:right;border:0;background:transparent;padding:6px 8px;border-radius:8px;font-variant-numeric:tabular-nums}
+.h-item:hover{background:var(--chrome-2)}
+.h-item:first-of-type{margin-top:auto}
+.h-e{display:block;color:var(--muted);font-size:.9rem;overflow-wrap:anywhere}
+.h-r{display:block;font-size:1.12rem;font-weight:700;overflow-wrap:anywhere}
+.hist-clear{border:0;background:transparent;color:var(--muted);font-size:.85rem;padding:4px 8px;align-self:flex-start;border-radius:6px}
+.hist-clear[hidden]{display:none}
+.display{padding:8px 14px 10px;border-top:1px solid var(--line)}
+.display input{width:100%;border:0;background:transparent;font-size:1.5rem;text-align:right;padding:2px 2px;font-variant-numeric:tabular-nums;outline:none}
+.preview{min-height:1.4em;text-align:right;color:var(--muted);font-size:1rem;font-variant-numeric:tabular-nums;padding-right:2px;overflow-wrap:anywhere}
+.preview.err{color:var(--red)}
+.keys{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;padding:0 10px 12px}
+.key{height:46px;border:0;border-radius:10px;background:var(--chrome-2);color:var(--text);font-size:1.05rem;padding:0}
+.key.fn{font-size:.92rem;background:transparent;border:1px solid var(--line)}
+.key.op{background:var(--accent-soft);color:var(--accent);font-size:1.2rem;font-weight:700}
+.key.eq{background:var(--accent);color:var(--accent-ink);font-size:1.4rem;font-weight:700;grid-column:5/7;grid-row:5/7;height:auto}
+.key.zero{grid-column:span 2}
+.key.act{color:var(--red);font-weight:700}
+.key[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.key:active{filter:brightness(.92)}
+
+.tb.txt{width:auto;padding:0 9px;font-weight:700;font-size:.82rem;letter-spacing:.02em}
+.ov{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+#lassoPath{fill:var(--accent);fill-opacity:.07;stroke:var(--accent);stroke-width:1.5;stroke-dasharray:6 5}
+#selRect{fill:var(--accent);fill-opacity:.06;stroke:var(--accent);stroke-width:1.5;stroke-dasharray:6 5}
+.mini{position:absolute;top:10px;right:10px;z-index:4;display:none;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100% - 20px);align-items:center;gap:2px;padding:4px;background:var(--chrome);
+  border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.16)}
+.mini-sep{width:1px;height:24px;background:var(--line);margin:0 3px}
+.mini .tb{width:36px;height:36px}
+.mini .swatch{width:30px;height:36px}
+.app.focus{grid-template-rows:minmax(0,1fr)}
+.app.focus .toolbar{display:none}
+.app.focus .mini{display:flex}
+.selbar{position:absolute;display:flex;gap:4px;padding:4px;background:var(--chrome);border:1px solid var(--line);border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.16);z-index:3}
+.selbar[hidden]{display:none}
+.selbar button{height:38px;padding:0 12px;border:0;border-radius:9px;background:transparent;font-weight:700;font-size:.92rem;white-space:nowrap}
+.selbar button:hover{background:var(--chrome-2)}
+.selbar .main-act{background:var(--accent);color:var(--accent-ink)}
+.selbar .main-act:hover{background:var(--accent);filter:brightness(1.06)}
+.selbar .del{color:var(--red)}
+.selbar [hidden]{display:none}
+[hidden]{display:none !important}
+.tb.sync{position:relative}
+.sdot{position:absolute;right:6px;bottom:7px;width:9px;height:9px;border-radius:50%;box-shadow:0 0 0 2px var(--chrome);display:none}
+.tb.sync[data-state="ok"] .sdot{display:block;background:var(--ink3)}
+.tb.sync[data-state="pending"] .sdot,.tb.sync[data-state="syncing"] .sdot{display:block;background:#D99A00}
+.tb.sync[data-state="error"] .sdot{display:block;background:var(--red)}
+.tb.sync[data-state="syncing"] svg{animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.4}}
+.dlg{width:min(92vw,470px);max-height:min(90vh,760px);padding:0;border:1px solid var(--line);border-radius:16px;background:var(--chrome);color:var(--text);
+  box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.dlg::backdrop{background:rgba(10,16,22,.45)}
+.dlg form{display:flex;flex-direction:column;gap:12px;padding:20px 20px 16px}
+.dlg h2{margin:0;font-size:1.15rem}
+.dlg p{margin:0}
+#syncSetup,#syncInfo{display:flex;flex-direction:column;gap:12px}
+.dlg-help{color:var(--muted);font-size:.93rem}
+.dlg-steps{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:6px;font-size:.92rem;color:var(--muted)}
+.dlg-steps b{color:var(--text)}
+.dlg label{display:flex;flex-direction:column;gap:4px;font-size:.88rem;font-weight:700}
+.dlg input{height:42px;border:1px solid var(--line);border-radius:9px;background:var(--paper);padding:0 10px;font-size:1rem;font-weight:400}
+.dlg-note{font-size:.85rem;color:var(--muted)}
+.dlg-where{font-weight:700;overflow-wrap:anywhere}
+.dlg-err{color:var(--red);font-size:.92rem}
+.dlg-err:empty{display:none}
+.dlg-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.dlg-gap{flex:1}
+.btn2{height:40px;padding:0 16px;border-radius:10px;border:1px solid var(--line);background:var(--chrome);font-weight:700}
+.btn2:hover{background:var(--chrome-2)}
+.btn2.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn2.danger{color:var(--red)}
+.btn2:disabled{opacity:.5;cursor:default}
+@media (prefers-reduced-motion:reduce){.tb.sync svg{animation:none !important}}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;
+  background:var(--text);color:var(--chrome);padding:9px 14px;border-radius:10px;font-size:.92rem;max-width:min(92vw,440px);
+  pointer-events:none;transition:opacity .2s,transform .2s;z-index:50;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast.has-act.show{pointer-events:auto}
+.toast button{margin-left:14px;padding:4px 8px;border:0;border-radius:6px;background:transparent;color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+@media (min-width:861px){
+  .app:not(.panel-open) .main{grid-template-columns:minmax(0,1fr)}
+  .app:not(.panel-open) .panel{display:none}
+  #panelClose{display:none}
+  .app.panel-open.graph-mode .main{grid-template-columns:minmax(240px,1fr) min(var(--pw,420px),calc(100% - 240px))}
+  .grip{left:-9px;top:0;bottom:0;width:18px;cursor:col-resize}
+  .grip::after{left:7px;top:50%;width:4px;height:48px;margin-top:-24px}
+}
+@media (max-width:860px){
+  .main{grid-template-columns:minmax(0,1fr)}
+  .panel{position:absolute;left:0;right:0;bottom:0;height:var(--ph,min(72%,580px));max-height:calc(100% - 48px);border-left:0;border-top:1px solid var(--line);
+    border-radius:16px 16px 0 0;box-shadow:var(--sheet-shadow);transform:translateY(calc(100% + 16px));visibility:hidden;
+    transition:transform .24s ease,visibility 0s linear .24s;z-index:5}
+  .app.panel-open .panel{transform:none;visibility:visible;transition:transform .24s ease,visibility 0s}
+  .brand{display:none}
+  .grip{left:0;right:0;top:0;height:24px;cursor:row-resize}
+  .grip::after{left:50%;top:8px;width:44px;height:5px;margin-left:-22px}
+  .panel-head{padding-top:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  .panel,.toast{transition:none !important}
+}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="toolbar" role="toolbar" aria-label="Writing tools">
+    <span class="brand">project-notes</span>
+    <div class="grp">
+      <button class="tb" id="tPen" aria-label="Pen (P)" title="Pen (P)"><svg viewBox="0 0 24 24"><path d="M15.5 4.5l4 4L9 19l-5 1 1-5z"/><path d="M13.5 6.5l4 4"/></svg></button>
+      <button class="tb" id="tEraser" aria-label="Eraser (E)" title="Eraser (E)"><svg viewBox="0 0 24 24"><path d="M15.8 3.8l4.4 4.4-9.7 9.8H6.8l-3-3z"/><path d="M9.3 8.3l6.4 6.4"/><path d="M12 20.5h8"/></svg></button>
+      <button class="tb" id="tLasso" aria-label="Lasso select (L)" title="Lasso select (L)"><svg viewBox="0 0 24 24"><path d="M12 4c4.6 0 8.5 2.3 8.5 5.2s-3.9 5.3-8.5 5.3-8.5-2.4-8.5-5.3S7.4 4 12 4z" stroke-dasharray="3.2 2.6"/><path d="M6.5 13.2c-1.4 1.6-1.3 3.6.4 4.8 1.3.9 1.6 2 .9 3"/></svg></button>
+    </div>
+    <div class="grp" id="inks" aria-label="Ink colour"></div>
+    <div class="grp" id="sizes" aria-label="Pen size"></div>
+    <div class="grp">
+      <button class="tb" id="undo" aria-label="Undo" title="Undo"><svg viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>
+      <button class="tb" id="redo" aria-label="Redo" title="Redo"><svg viewBox="0 0 24 24"><path d="M15 14l5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg></button>
+      <button class="tb" id="pasteBtn" aria-label="Paste copied writing" title="Paste copied writing"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 13h6M9 16.5h4"/></svg></button>
+    </div>
+    <div class="grp">
+      <button class="tb" id="finger" aria-label="Draw with finger" title="Draw with finger"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M12 10.5V9a1.5 1.5 0 0 1 3 0v2"/><path d="M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-4.6-2.2L4 15.5a1.6 1.6 0 0 1 2.4-2.1L9 15"/></svg></button>
+      <button class="tb" id="clear" aria-label="Clear page" title="Clear page"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M6 7l1 13h10l1-13"/><path d="M9 7V4h6v3"/></svg></button>
+      <button class="tb txt" id="pdfBtn" aria-label="Save all pages as PDF" title="Save all pages as PDF">PDF</button>
+      <button class="tb sync" id="syncBtn" aria-label="Sync with GitHub" title="Sync with GitHub"><svg viewBox="0 0 24 24"><path d="M7 18.5h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.6 9.2 4.7 4.7 0 0 0 7 18.5z"/></svg><span class="sdot" id="syncDot"></span></button>
+    </div>
+    <div class="spacer"></div>
+    <div class="grp">
+      <button class="tb" id="prev" aria-label="Previous page" title="Previous page"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <span class="pglabel" id="pgLabel" aria-live="polite">1 / 1</span>
+      <button class="tb" id="next" aria-label="Next page" title="Next page"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      <button class="tb" id="addPage" aria-label="New page" title="New page"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+      <button class="tb" id="delPage" aria-label="Delete this page" title="Delete this page"><svg viewBox="0 0 24 24"><path d="M6.5 3h7.5l4 4v14h-11.5z"/><path d="M14 3v4h4"/><path d="M9.5 14h5"/></svg></button>
+    </div>
+    <div class="grp">
+      <button class="tb" id="panelToggle" aria-label="Calculator and graph" title="Calculator and graph" aria-expanded="false"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15h.01M8.5 18h.01M12 18h.01M15.5 18h.01" stroke-width="2.4"/></svg></button>
+      <button class="tb" id="fsBtn" aria-label="Full screen (F)" title="Full screen (F)"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+  </header>
+
+  <div class="main">
+    <div class="board" id="board">
+      <div class="mini" id="mini" role="toolbar" aria-label="Writing tools">
+        <button class="tb" id="mPen" aria-label="Pen" title="Pen"><svg viewBox="0 0 24 24"><path d="M15.5 4.5l4 4L9 19l-5 1 1-5z"/><path d="M13.5 6.5l4 4"/></svg></button>
+        <button class="swatch" id="mInk" aria-label="Change ink colour" title="Change ink colour"><span></span></button>
+        <button class="tb" id="mEraser" aria-label="Eraser" title="Eraser"><svg viewBox="0 0 24 24"><path d="M15.8 3.8l4.4 4.4-9.7 9.8H6.8l-3-3z"/><path d="M9.3 8.3l6.4 6.4"/><path d="M12 20.5h8"/></svg></button>
+        <button class="tb" id="mLasso" aria-label="Lasso select" title="Lasso select"><svg viewBox="0 0 24 24"><path d="M12 4c4.6 0 8.5 2.3 8.5 5.2s-3.9 5.3-8.5 5.3-8.5-2.4-8.5-5.3S7.4 4 12 4z" stroke-dasharray="3.2 2.6"/><path d="M6.5 13.2c-1.4 1.6-1.3 3.6.4 4.8 1.3.9 1.6 2 .9 3"/></svg></button>
+        <button class="tb" id="mUndo" aria-label="Undo" title="Undo"><svg viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>
+        <button class="tb" id="mRedo" aria-label="Redo" title="Redo"><svg viewBox="0 0 24 24"><path d="M15 14l5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg></button>
+        <button class="tb" id="mPaste" aria-label="Paste copied writing" title="Paste copied writing"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 13h6M9 16.5h4"/></svg></button>
+        <button class="tb" id="mCalc" aria-label="Calculator and graph" title="Calculator and graph"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15h.01M8.5 18h.01M12 18h.01M15.5 18h.01" stroke-width="2.4"/></svg></button>
+        <span class="mini-sep"></span>
+        <button class="tb" id="mExit" aria-label="Exit full screen (F)" title="Exit full screen (F)"><svg viewBox="0 0 24 24"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></button>
+      </div>
+      <canvas id="cv" aria-label="Writing page"></canvas>
+      <svg class="ov" id="ov" aria-hidden="true"><path id="lassoPath" d=""/><rect id="selRect" rx="6" visibility="hidden"/></svg>
+      <div class="selbar" id="selbar" role="toolbar" aria-label="Selection" hidden>
+        <button class="main-act" id="selCopy">Copy</button>
+        <button id="selCut">Cut</button>
+        <button id="selShare" hidden>Share</button>
+        <button id="selSave" hidden>Save image</button>
+        <button class="del" id="selDel">Delete</button>
+      </div>
+      <div class="hint-empty" id="emptyHint">Write with a stylus or finger. Use the lasso to select an equation and copy it into Claude or ChatGPT.</div>
+      <button class="totop" id="toTop" aria-label="Back to top of page" title="Back to top" hidden><svg viewBox="0 0 24 24"><path d="M12 19V6"/><path d="M6.5 11.5L12 6l5.5 5.5"/></svg></button>
+    </div>
+
+    <aside class="panel" id="panel" aria-label="Calculator and graph">
+      <div class="grip" id="panelGrip" role="separator" tabindex="0" aria-label="Resize calculator panel" title="Drag to resize. Double-tap to reset."></div>
+      <div class="panel-head">
+        <div class="tabs" role="tablist" aria-label="Tools">
+          <button role="tab" id="tabCalc" aria-controls="calcView" aria-selected="true">Calculator</button>
+          <button role="tab" id="tabGraph" aria-controls="graphView" aria-selected="false">Graph</button>
+        </div>
+        <div class="head-r">
+          <div class="angle" role="group" aria-label="Angle unit">
+            <button id="degBtn">Deg</button><button id="radBtn">Rad</button>
+          </div>
+          <button class="tb" id="panelClose" aria-label="Close panel"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        </div>
+      </div>
+      <div class="view" id="calcView" role="tabpanel">
+        <div class="hist" id="hist"></div>
+        <div class="display">
+          <input id="expr" type="text" inputmode="none" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Expression" placeholder="0">
+          <div class="preview" id="preview" aria-live="polite"></div>
+        </div>
+        <div class="keys" id="keys"></div>
+      </div>
+      <div class="view" id="graphView" role="tabpanel" hidden>
+        <div class="fns" id="fns"></div>
+        <div class="plotwrap" id="plotwrap">
+          <canvas id="plot" aria-label="Graph of your functions"></canvas>
+          <div class="plot-ctl">
+            <button class="pc" id="zIn" aria-label="Zoom in" title="Zoom in">+</button>
+            <button class="pc" id="zOut" aria-label="Zoom out" title="Zoom out">−</button>
+            <button class="pc" id="zHome" aria-label="Reset view" title="Reset view"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6.5 9.5V20h11V9.5"/></svg></button>
+            <button class="pc" id="gCopy" aria-label="Copy graph image" title="Copy graph image"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></svg></button>
+          </div>
+        </div>
+        <div class="trace" id="trace" aria-live="polite"></div>
+      </div>
+    </aside>
+  </div>
+</div>
+<dialog class="dlg" id="syncDlg" aria-labelledby="syncTitle">
+  <form method="dialog" onsubmit="return false">
+    <h2 id="syncTitle">Sync with GitHub</h2>
+    <div id="syncSetup">
+      <p class="dlg-help">Your notes are saved as a file in your own GitHub repository, so you can open them on any device.</p>
+      <ol class="dlg-steps">
+        <li>On GitHub, create a <b>private</b> repository, for example <b>my-notes</b>.</li>
+        <li>Open <b>Settings › Developer settings › Personal access tokens › Fine-grained tokens</b> and generate a token. Under <b>Repository access</b> pick only that repository. Under <b>Permissions</b>, set <b>Contents</b> to <b>Read and write</b>.</li>
+        <li>Enter the details below. Do the same on each device you use.</li>
+      </ol>
+      <label>Repository<input id="ghRepo" placeholder="username/my-notes" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></label>
+      <label>File name<input id="ghPath" value="project-notes.json" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"></label>
+      <label>Access token<input id="ghToken" type="password" placeholder="github_pat_…" autocomplete="off" autocapitalize="off" spellcheck="false"></label>
+      <p class="dlg-note">The token is kept only in this browser on this device. It is never written into your notes.</p>
+    </div>
+    <div id="syncInfo" hidden>
+      <p class="dlg-where" id="syncWhere"></p>
+      <p class="dlg-help" id="syncWhen"></p>
+      <p class="dlg-help">Changes sync automatically a few seconds after you stop writing, and whenever you reopen the app. If the same page was edited on two devices, the newer edit is kept.</p>
+    </div>
+    <p class="dlg-note" id="storeInfo"></p>
+    <p class="dlg-err" id="syncErr" role="alert"></p>
+    <div class="dlg-actions">
+      <button type="button" class="btn2 danger" id="ghDisconnect" hidden>Disconnect</button>
+      <span class="dlg-gap"></span>
+      <button type="button" class="btn2" id="dlgClose">Close</button>
+      <button type="button" class="btn2 primary" id="ghSyncNow" hidden>Sync now</button>
+      <button type="button" class="btn2 primary" id="ghConnect">Connect</button>
+    </div>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ---------- Device storage: IndexedDB with compact stroke encoding ---------- */
+// Points are stored as deltas in 0.1 px / 0.01 pressure steps, written as base-64 variable-length numbers.
+// That keeps notes about 3–4× smaller than plain JSON, both on the device and in the GitHub file.
+const NoteStore = (() => {
+  const B64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+  const B64I = {}; for (let i = 0; i < 64; i++) B64I[B64[i]] = i;
+  function encInt(n, out) {
+    let z = n >= 0 ? 2 * n : -2 * n - 1;
+    do { let d = z % 32; z = Math.floor(z / 32); if (z) d += 32; out.push(B64[d]); } while (z);
+  }
+  function decInts(str) {
+    const out = []; let z = 0, mul = 1;
+    for (let i = 0; i < str.length; i++) {
+      const v = B64I[str[i]]; if (v === undefined) continue;
+      z += (v & 31) * mul;
+      if (v & 32) mul *= 32; else { out.push(z % 2 ? -(z + 1) / 2 : z / 2); z = 0; mul = 1; }
+    }
+    return out;
+  }
+  function encPts(pts) {
+    const o = []; let px = 0, py = 0, pq = 0;
+    for (const p of pts) {
+      const x = Math.round(p[0] * 10), y = Math.round(p[1] * 10), q = Math.round((p[2] ?? 0.5) * 100);
+      encInt(x - px, o); encInt(y - py, o); encInt(q - pq, o); px = x; py = y; pq = q;
+    }
+    return o.join('');
+  }
+  function decPts(d) {
+    const v = decInts(d), pts = []; let x = 0, y = 0, q = 0;
+    for (let i = 0; i + 2 < v.length; i += 3) { x += v[i]; y += v[i + 1]; q += v[i + 2]; pts.push([x / 10, y / 10, q / 100]); }
+    return pts;
+  }
+  const encStroke = s => ({ c: s.c, w: s.w, d: encPts(s.pts) });
+  const decStroke = o => ({
+    c: (o && o.c) | 0, w: +(o && o.w) || 2.6,
+    pts: o && typeof o.d === 'string' ? decPts(o.d) : (o && Array.isArray(o.pts) ? o.pts : []),
+  });
+
+  let dbP = null;
+  function open() {
+    if (dbP) return dbP;
+    dbP = new Promise((res, rej) => {
+      if (!window.indexedDB) { rej(new Error('IndexedDB unavailable')); return; }
+      const r = indexedDB.open('project-notes', 1);
+      r.onupgradeneeded = () => {
+        const db = r.result;
+        if (!db.objectStoreNames.contains('meta')) db.createObjectStore('meta');
+        if (!db.objectStoreNames.contains('pages')) db.createObjectStore('pages', { keyPath: 'id' });
+      };
+      r.onsuccess = () => res(r.result);
+      r.onerror = () => rej(r.error);
+      r.onblocked = () => rej(new Error('blocked'));
+    });
+    return dbP;
+  }
+  const done = tx => new Promise((res, rej) => {
+    tx.oncomplete = () => res(); tx.onerror = () => rej(tx.error); tx.onabort = () => rej(tx.error || new Error('aborted'));
+  });
+  async function loadAll() {
+    const db = await open();
+    const tx = db.transaction(['meta', 'pages'], 'readonly');
+    const mReq = tx.objectStore('meta').get('state'), pReq = tx.objectStore('pages').getAll();
+    await done(tx);
+    const meta = mReq.result;
+    if (!meta || !Array.isArray(meta.order)) return null;
+    const byId = new Map(pReq.result.map(r => [r.id, r]));
+    const pages = meta.order.map(id => byId.get(id)).filter(Boolean).map(r => ({
+      id: r.id, t: r.t || 0, sy: (meta.sy && meta.sy[r.id]) || 0, strokes: JSON.parse(r.s || '[]').map(decStroke),
+    }));
+    return Object.assign({}, meta, { pages });
+  }
+  async function write(meta, recs, keepIds, delIds) {
+    const db = await open();
+    const tx = db.transaction(['meta', 'pages'], 'readwrite');
+    tx.objectStore('meta').put(meta, 'state');
+    const ps = tx.objectStore('pages');
+    for (const r of recs) ps.put(r);
+    if (delIds) for (const id of delIds) ps.delete(id);
+    if (keepIds) {
+      const k = ps.getAllKeys();
+      k.onsuccess = () => { for (const id of k.result) if (!keepIds.has(id)) ps.delete(id); };
+    }
+    await done(tx);
+  }
+  return { encStroke, decStroke, encPts, decPts, loadAll, write };
+})();
+
+let BOOT = null, BOOT_IDB = true;
+(async () => {
+  try { BOOT = await NoteStore.loadAll(); } catch (e) { BOOT_IDB = false; }
+  if (!BOOT) {
+    // First run of this version: bring over notes saved by older versions (or the fallback store).
+    try {
+      const d = JSON.parse(localStorage.getItem('project-notes.v1') || localStorage.getItem('margin.notebook.v1') || 'null');
+      if (d && Array.isArray(d.pages) && d.pages.length) { BOOT = d; BOOT.fromLocal = true; }
+    } catch (_) {}
+  }
+  try { if (navigator.storage && navigator.storage.persist && !(await navigator.storage.persisted())) navigator.storage.persist(); } catch (_) {}
+  main();
+})();
+
+function main() {
+  const $ = s => document.querySelector(s);
+  const app = $('#app'), board = $('#board'), cv = $('#cv'), ctx = cv.getContext('2d');
+  const SIZES = [1.6, 2.6, 4.2];
+  const SIZE_NAMES = ['Fine', 'Medium', 'Bold'];
+  const INK_NAMES = ['Black', 'Blue', 'Red', 'Green'];
+  const LIGHT_INKS = ['#1A2230', '#2346C8', '#C8312A', '#1F7A4D'];
+  const KEY = 'project-notes.v1', OLD_KEY = 'margin.notebook.v1';
+
+  /* ---------- State ---------- */
+  const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  const newPage = () => ({ id: uid(), t: 0, strokes: [], sy: 0 });
+  let state = BOOT ? Object.assign({}, BOOT) : { pages: [newPage()], cur: 0, tool: 'pen', ink: 0, size: 1, finger: true, penSeen: false };
+  state.pages = (state.pages || []).map(p => ({
+    id: p.id || uid(), t: +p.t || 0, sy: Math.max(0, +p.sy || 0), strokes: (p.strokes || []).map(NoteStore.decStroke),
+  }));
+  if (!state.pages.length) state.pages = [newPage()];
+  ['order', 'sy', 'v', 'fromLocal'].forEach(k => delete state[k]);
+  state.cur = Math.min(Math.max(0, state.cur | 0), state.pages.length - 1);
+  if (!state.deleted || typeof state.deleted !== 'object') state.deleted = {};   // id → time a page was deleted
+  state.calc ||= { hist: [], deg: true, ans: 0 };
+  delete state.search;
+  if (!Array.isArray(state.calc.fns) || state.calc.fns.length !== 4) state.calc.fns = ['', '', '', ''];
+  if (!['pen', 'eraser', 'lasso'].includes(state.tool)) state.tool = 'pen';
+  const page = () => state.pages[state.cur];
+
+  /* Saving: page contents go to IndexedDB, one record per page; only edited pages are rewritten. */
+  const dirtyPages = new Set();
+  let allDirty = !BOOT || !!BOOT.fromLocal, fromLocal = !!(BOOT && BOOT.fromLocal);
+  const removedPages = new Set();
+  let idbOK = BOOT_IDB, saveT = null, saving = false, saveAgain = false, warnedSave = false;
+  const encCache = new WeakMap();
+  function encPage(p) {
+    const c = encCache.get(p);
+    if (c && c.t === p.t && c.n === p.strokes.length) return c.s;
+    const str = JSON.stringify(p.strokes.map(NoteStore.encStroke));
+    encCache.set(p, { t: p.t, n: p.strokes.length, s: str });
+    return str;
+  }
+  const markDirty = p => { dirtyPages.add(p.id); encCache.delete(p); };
+  function save() { clearTimeout(saveT); saveT = setTimeout(flush, 400); }
+  async function flush() {
+    clearTimeout(saveT);
+    if (active) { saveT = setTimeout(flush, 300); return; }   // never store half a stroke
+    if (saving) { saveAgain = true; return; }
+    saving = true;
+    const ids = state.pages.map(p => p.id);
+    const meta = { v: 2, order: ids, sy: Object.fromEntries(state.pages.map(p => [p.id, p.sy || 0])), cur: state.cur,
+      tool: state.tool, ink: state.ink, size: state.size, finger: state.finger, penSeen: state.penSeen, calc: state.calc, deleted: state.deleted,
+      panelW: state.panelW || null, panelH: state.panelH || null };
+    const wasAll = allDirty, took = [...dirtyPages], gone = [...removedPages];
+    removedPages.clear();
+    const recs = state.pages.filter(p => wasAll || dirtyPages.has(p.id)).map(p => ({ id: p.id, t: p.t || 0, s: encPage(p) }));
+    dirtyPages.clear(); allDirty = false;
+    try {
+      if (idbOK) {
+        await NoteStore.write(meta, recs, wasAll ? new Set(ids) : null, gone);
+        if (fromLocal) { fromLocal = false; try { localStorage.removeItem(KEY); localStorage.removeItem(OLD_KEY); } catch (_) {} }
+      } else {
+        localStorage.setItem(KEY, JSON.stringify(Object.assign({}, meta, {
+          pages: state.pages.map(p => ({ id: p.id, t: p.t || 0, sy: p.sy || 0, strokes: JSON.parse(encPage(p)) })),
+        })));
+      }
+      warnedSave = false;
+    } catch (e) {
+      took.forEach(id => dirtyPages.add(id)); gone.forEach(id => removedPages.add(id)); if (wasAll) allDirty = true;
+      if (!warnedSave) {
+        warnedSave = true;
+        const full = e && (e.name === 'QuotaExceededError' || /quota/i.test(e.message || ''));
+        toast(full ? 'This device’s storage is full. Free up some space so new writing can be saved.' : 'Couldn’t save on this device. Your notes are still open, so try again shortly.');
+      }
+    } finally {
+      saving = false;
+      if (saveAgain || dirtyPages.size || allDirty) { saveAgain = false; save(); }
+    }
+  }
+  window.addEventListener('pagehide', () => flush());
+  document.addEventListener('visibilitychange', () => { if (document.hidden) flush(); });
+
+  const hist = new WeakMap();
+  function H() { let h = hist.get(page()); if (!h) { h = { undo: [], redo: [] }; hist.set(page(), h); } return h; }
+
+  let toastT;
+  function toast(msg, action) {
+    const t = $('#toast'); t.textContent = msg;
+    t.classList.toggle('has-act', !!action);
+    if (action) {
+      const b = document.createElement('button'); b.type = 'button'; b.textContent = action.label;
+      b.onclick = () => { t.classList.remove('show'); action.fn(); };
+      t.append(b);
+    }
+    t.classList.add('show');
+    clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), action ? 6000 : 3200);
+  }
+
+  /* ---------- Drawing ---------- */
+  let W = 0, Ht = 0, dpr = 1;
+  function inkColors() {
+    const cs = getComputedStyle(document.documentElement);
+    return [0, 1, 2, 3].map(i => cs.getPropertyValue('--ink' + i).trim() || LIGHT_INKS[i]);
+  }
+  const pf = p => 0.45 + 1.1 * p;
+  const mid = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2];
+
+  function seg(c, s, i, col) {
+    const p = s.pts;
+    const a = i === 1 ? p[0] : mid(p[i - 2], p[i - 1]);
+    const k = p[i - 1], b = mid(p[i - 1], p[i]);
+    c.beginPath(); c.moveTo(a[0], a[1]); c.quadraticCurveTo(k[0], k[1], b[0], b[1]);
+    c.lineWidth = s.w * pf(k[2]); c.strokeStyle = col[s.c]; c.lineCap = 'round'; c.lineJoin = 'round'; c.stroke();
+  }
+  function tail(c, s, col) {
+    const p = s.pts, n = p.length;
+    if (n === 1) { dot(c, s, col); return; }
+    const a = mid(p[n - 2], p[n - 1]), b = p[n - 1];
+    c.beginPath(); c.moveTo(a[0], a[1]); c.lineTo(b[0], b[1]);
+    c.lineWidth = s.w * pf(b[2]); c.strokeStyle = col[s.c]; c.lineCap = 'round'; c.stroke();
+  }
+  function dot(c, s, col) {
+    const q = s.pts[0];
+    c.beginPath(); c.arc(q[0], q[1], Math.max(0.8, s.w * pf(q[2]) / 2), 0, Math.PI * 2);
+    c.fillStyle = col[s.c]; c.fill();
+  }
+  function drawStroke(c, s, col) {
+    for (let i = 1; i < s.pts.length; i++) seg(c, s, i, col);
+    tail(c, s, col);
+  }
+  function redraw() {
+    const sy = page().sy || 0;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, Ht);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, -sy * dpr);
+    const col = inkColors(), top = sy - 40, bot = sy + Ht + 40;
+    for (const s of page().strokes) {
+      const y = s.pts[0][1];
+      if (s.pts.length < 400 && (y < top - 600 || y > bot + 600)) continue;
+      drawStroke(ctx, s, col);
+    }
+    board.style.backgroundPosition = `0 ${-sy}px`;
+    $('#toTop').hidden = sy < 4;
+    $('#emptyHint').hidden = page().strokes.length > 0 || sy > 0;
+    if (typeof updateSelUI === 'function') { updateSelUI(); drawLasso(); }
+  }
+  function resize() {
+    const r = board.getBoundingClientRect();
+    W = r.width; Ht = r.height; dpr = window.devicePixelRatio || 1;
+    cv.width = Math.max(1, Math.round(W * dpr)); cv.height = Math.max(1, Math.round(Ht * dpr));
+    redraw();
+  }
+  new ResizeObserver(resize).observe(board);
+  matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', redraw);
+
+  let scrollSaveT;
+  function setScroll(v) {
+    const n = Math.max(0, Math.round(v));
+    if (n === page().sy) return;
+    page().sy = n; redraw();
+    clearTimeout(scrollSaveT); scrollSaveT = setTimeout(save, 300);
+  }
+  board.addEventListener('wheel', e => { e.preventDefault(); setScroll((page().sy || 0) + e.deltaY); }, { passive: false });
+  $('#toTop').onclick = () => setScroll(0);
+
+  /* ---------- Geometry helpers ---------- */
+  const r1 = n => Math.round(n * 10) / 10;
+  function bboxOf(strokes) {
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    for (const s of strokes) {
+      const r = s.w * 1.6;
+      for (const p of s.pts) {
+        if (p[0] - r < x0) x0 = p[0] - r; if (p[1] - r < y0) y0 = p[1] - r;
+        if (p[0] + r > x1) x1 = p[0] + r; if (p[1] + r > y1) y1 = p[1] + r;
+      }
+    }
+    return { x0, y0, x1, y1 };
+  }
+  function pip(p, poly) {
+    let inside = false;
+    for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+      const a = poly[i], b = poly[j];
+      if ((a[1] > p[1]) !== (b[1] > p[1]) && p[0] < (b[0] - a[0]) * (p[1] - a[1]) / (b[1] - a[1]) + a[0]) inside = !inside;
+    }
+    return inside;
+  }
+  function translate(strokes, dx, dy) {
+    for (const s of strokes) for (const p of s.pts) { p[0] = r1(p[0] + dx); p[1] = r1(p[1] + dy); }
+  }
+  function renderStrokes(strokes, maxSide) {
+    const b = bboxOf(strokes), pad = 28;
+    const w = b.x1 - b.x0 + pad * 2, h = b.y1 - b.y0 + pad * 2;
+    const scale = Math.max(1, Math.min(3, maxSide / Math.max(w, h)));
+    const off = document.createElement('canvas');
+    off.width = Math.round(w * scale); off.height = Math.round(h * scale);
+    const c = off.getContext('2d');
+    c.fillStyle = '#FFFFFF'; c.fillRect(0, 0, off.width, off.height);
+    c.setTransform(scale, 0, 0, scale, (pad - b.x0) * scale, (pad - b.y0) * scale);
+    for (const s of strokes) drawStroke(c, s, LIGHT_INKS);
+    return off;
+  }
+
+  /* ---------- Selection ---------- */
+  const lassoPath = $('#lassoPath'), selRect = $('#selRect'), selbar = $('#selbar');
+  let sel = null;
+  const canCopy = !!(navigator.clipboard && navigator.clipboard.write && window.ClipboardItem);
+  let canShare = false;
+  try { canShare = !!(navigator.canShare && navigator.canShare({ files: [new File([''], 'x.png', { type: 'image/png' })] })); } catch (_) {}
+  $('#selShare').hidden = !canShare; $('#selSave').hidden = canCopy || canShare;
+
+  function drawLasso() {
+    if (!active || active.mode !== 'lasso') { lassoPath.setAttribute('d', ''); return; }
+    const sy = page().sy || 0;
+    lassoPath.setAttribute('d', 'M' + active.poly.map(p => `${p[0]} ${r1(p[1] - sy)}`).join('L') + 'Z');
+  }
+  function updateSelUI() {
+    if (!sel) { selRect.setAttribute('visibility', 'hidden'); selbar.hidden = true; return; }
+    const sy = page().sy || 0, b = sel.box, g = 6;
+    selRect.setAttribute('x', b.x0 - g); selRect.setAttribute('y', b.y0 - g - sy);
+    selRect.setAttribute('width', b.x1 - b.x0 + 2 * g); selRect.setAttribute('height', b.y1 - b.y0 + 2 * g);
+    selRect.setAttribute('visibility', 'visible');
+    selbar.hidden = !!(active && active.mode === 'move');
+    if (selbar.hidden) return;
+    const bw = selbar.offsetWidth, bh = selbar.offsetHeight;
+    let top = b.y0 - sy - g - bh - 10;
+    if (top < 8) top = b.y1 - sy + g + 10;
+    top = Math.min(Math.max(8, top), Ht - bh - 8);
+    const left = Math.min(Math.max(8, (b.x0 + b.x1) / 2 - bw / 2), Math.max(8, W - bw - 8));
+    selbar.style.left = left + 'px'; selbar.style.top = top + 'px';
+  }
+  function refreshSelImage() {
+    if (!sel) return;
+    const s = sel; s.blob = null;
+    s.blobP = new Promise(res => renderStrokes(s.strokes, 1800).toBlob(b => { s.blob = b; res(b); }, 'image/png'));
+  }
+  function clearSel() { if (!sel) return; sel = null; updateSelUI(); }
+  function finishLasso(poly) {
+    lassoPath.setAttribute('d', '');
+    if (poly.length < 3) return;
+    let px0 = Infinity, py0 = Infinity, px1 = -Infinity, py1 = -Infinity;
+    for (const p of poly) { px0 = Math.min(px0, p[0]); py0 = Math.min(py0, p[1]); px1 = Math.max(px1, p[0]); py1 = Math.max(py1, p[1]); }
+    const chosen = page().strokes.filter(s => {
+      let inside = 0, n = s.pts.length;
+      for (const p of s.pts) if (p[0] >= px0 && p[0] <= px1 && p[1] >= py0 && p[1] <= py1 && pip(p, poly)) inside++;
+      return inside > 0 && inside >= n * 0.5;
+    });
+    if (!chosen.length) { toast('Nothing inside the loop. Draw around the writing you want.'); return; }
+    sel = { strokes: chosen, box: bboxOf(chosen) };
+    refreshSelImage(); updateSelUI();
+  }
+  function saveBlob(blob, name) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  }
+  /* In-app clipboard: copied writing can be pasted on any page, and survives reloads. */
+  const CLIP_KEY = KEY + '.clip';
+  let clip = null, pasteN = 0;
+  try { const c = JSON.parse(localStorage.getItem(CLIP_KEY) || 'null'); if (Array.isArray(c) && c.length) clip = c; } catch (_) {}
+  const cloneStrokes = ss => ss.map(s => ({ c: s.c, w: s.w, pts: s.pts.map(p => p.slice()) }));
+  function setClip(strokes) {
+    clip = cloneStrokes(strokes); pasteN = 0;
+    try { localStorage.setItem(CLIP_KEY, JSON.stringify(clip)); } catch (_) {}
+    syncUI();
+  }
+  async function copySel() {
+    if (!sel) return;
+    const s = sel;
+    setClip(s.strokes);
+    let img = false;
+    if (canCopy) { try { await navigator.clipboard.write([new ClipboardItem({ 'image/png': s.blobP })]); img = true; } catch (_) {} }
+    toast(img ? 'Copied. Paste it on any page here, or into Claude or ChatGPT.' : 'Copied. Tap Paste to put it on any page.');
+  }
+  function cutSel() {
+    if (!sel) return;
+    setClip(sel.strokes); deleteSel();
+    toast('Cut. Tap Paste to put it on any page.');
+  }
+  function pasteClip() {
+    if (!clip || !clip.length) { toast('Nothing to paste yet. Select writing with the lasso, then tap Copy.'); return; }
+    cancelActive();
+    const ss = cloneStrokes(clip), b = bboxOf(ss), top = page().sy || 0;
+    const bw = b.x1 - b.x0, bh = b.y1 - b.y0, off = (pasteN++ % 6) * 24;
+    const tx = (bw < W - 40 ? (W - bw) / 2 : 20) + off;
+    const ty = top + (bh < Ht - 40 ? (Ht - bh) / 2 : 20) + off;
+    translate(ss, tx - b.x0, ty - b.y0);
+    page().strokes.push(...ss);
+    pushAction({ t: 'paste', ss });
+    state.tool = 'lasso';
+    sel = { strokes: ss, box: bboxOf(ss) };
+    refreshSelImage(); redraw(); syncUI(); save();
+    toast('Pasted. Drag it into place.');
+  }
+  function shareSel() {
+    if (!sel) return;
+    if (!sel.blob) { toast('Preparing the image. Tap Share again.'); return; }
+    navigator.share({ files: [new File([sel.blob], 'equation.png', { type: 'image/png' })] })
+      .catch(e => { if (e && e.name !== 'AbortError') toast('Couldn’t share the image.'); });
+  }
+  async function saveSel() { if (!sel) return; const b = await sel.blobP; if (b) saveBlob(b, 'equation.png'); }
+  function deleteSel() {
+    if (!sel) return;
+    const st = page().strokes, set = new Set(sel.strokes), items = [];
+    for (let i = st.length - 1; i >= 0; i--) if (set.has(st[i])) { items.push({ s: st[i], i }); st.splice(i, 1); }
+    sel = null; pushAction({ t: 'erase', items }); redraw(); save();
+  }
+  $('#selCopy').onclick = copySel; $('#selCut').onclick = cutSel; $('#selShare').onclick = shareSel;
+  $('#selSave').onclick = saveSel; $('#selDel').onclick = deleteSel;
+  selbar.addEventListener('pointerdown', e => e.stopPropagation());
+
+  /* ---------- Pointer input ---------- */
+  let active = null;
+  const touches = new Map(); let pan = null, panOrigin = null;
+  const ignored = new Set();                 // touch ids treated as a palm until lifted
+  let penDown = false, lastPen = -1e9;       // last time the stylus touched or hovered
+  const PALM_SIZE = 60;                      // contact size (CSS px) above which a touch is a palm
+  const avgY = () => { let t = 0; touches.forEach(y => t += y); return t / touches.size; };
+  const startPan = () => { pan = { a: avgY(), sy: page().sy || 0, armed: !!(pan && pan.armed) }; };
+  const isPalm = e => Math.max(e.width || 0, e.height || 0) > PALM_SIZE;
+  const penBusy = () => penDown || performance.now() - lastPen < 900;
+  function endPan(revert) {
+    if (revert && panOrigin !== null) setScroll(panOrigin);
+    pan = null; panOrigin = null;
+  }
+  function rejectTouches() {                 // stylus landed: every touch on screen is a palm
+    touches.forEach((_, id) => ignored.add(id));
+    touches.clear(); endPan(true);
+  }
+
+  function pos(e) {
+    const r = active ? active.rect : cv.getBoundingClientRect();
+    const pr = e.pointerType === 'pen' ? (e.pressure > 0 ? e.pressure : 0.5) : 0.5;
+    return [r1(e.clientX - r.left), r1(e.clientY - r.top + (page().sy || 0)), Math.round(pr * 100) / 100];
+  }
+  function distSeg(p, a, b) {
+    const dx = b[0] - a[0], dy = b[1] - a[1], L = dx * dx + dy * dy;
+    let t = L ? ((p[0] - a[0]) * dx + (p[1] - a[1]) * dy) / L : 0;
+    t = Math.max(0, Math.min(1, t));
+    return Math.hypot(p[0] - (a[0] + t * dx), p[1] - (a[1] + t * dy));
+  }
+  function hits(s, p, r) {
+    const rr = r + s.w, q = s.pts;
+    if (q.length === 1) return Math.hypot(p[0] - q[0][0], p[1] - q[0][1]) < rr;
+    for (let i = 1; i < q.length; i++) if (distSeg(p, q[i - 1], q[i]) < rr) return true;
+    return false;
+  }
+  function eraseAt(p) {
+    const st = page().strokes; let changed = false;
+    for (let i = st.length - 1; i >= 0; i--) {
+      if (hits(st[i], p, 9)) { active.removed.push({ s: st[i], i }); st.splice(i, 1); changed = true; }
+    }
+    if (changed) redraw();
+  }
+  function cancelActive() {
+    if (!active) return;
+    encCache.delete(page());
+    const a = active; active = null;
+    const st = page().strokes;
+    if (a.mode === 'draw') { const k = st.indexOf(a.stroke); if (k >= 0) st.splice(k, 1); }
+    else if (a.mode === 'erase') { for (let j = a.removed.length - 1; j >= 0; j--) st.splice(a.removed[j].i, 0, a.removed[j].s); }
+    else if (a.mode === 'move' && sel) { translate(sel.strokes, -a.dx, -a.dy); sel.box = bboxOf(sel.strokes); }
+    lassoPath.setAttribute('d', '');
+    redraw();
+  }
+
+  cv.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'pen') {
+      penDown = true; lastPen = performance.now();
+      if (touches.size) rejectTouches();
+      if (!state.penSeen) {
+        state.penSeen = true; state.finger = false; syncUI(); save();
+        toast('Stylus found. Fingers now scroll the page, and your palm won’t leave marks.');
+      }
+    }
+    if (e.pointerType === 'touch') {
+      e.preventDefault();
+      if (isPalm(e) || penBusy()) { ignored.add(e.pointerId); return; }
+      touches.set(e.pointerId, e.clientY);
+      try { cv.setPointerCapture(e.pointerId); } catch (_) {}
+      if (!state.finger || touches.size >= 2) {
+        if (active && active.type === 'touch') cancelActive();
+        if (!pan) panOrigin = page().sy || 0;
+        startPan(); return;
+      }
+    }
+    if (e.pointerType === 'mouse' && e.button !== 0 && e.button !== 5) return;
+    if (active) {
+      if (e.pointerType === 'pen' && active.type === 'touch') cancelActive(); else return;
+    }
+    e.preventDefault();
+    try { cv.setPointerCapture(e.pointerId); } catch (_) {}
+    const penEraser = e.button === 5 || (e.buttons & 32) === 32;
+    const mode = penEraser || state.tool === 'eraser' ? 'erase' : state.tool === 'lasso' ? 'lasso' : 'draw';
+    active = { id: e.pointerId, type: e.pointerType, rect: cv.getBoundingClientRect(), mode, col: inkColors() };
+    const p = pos(e);
+    if (mode === 'lasso') {
+      const b = sel && sel.box;
+      if (b && p[0] > b.x0 - 14 && p[0] < b.x1 + 14 && p[1] > b.y0 - 14 && p[1] < b.y1 + 14) {
+        active.mode = 'move'; active.last = p; active.dx = 0; active.dy = 0; updateSelUI();
+      } else { clearSel(); active.poly = [p]; drawLasso(); }
+      return;
+    }
+    clearSel();
+    if (mode === 'erase') { active.removed = []; eraseAt(p); }
+    else {
+      const s = { c: state.ink, w: SIZES[state.size], pts: [p] };
+      active.stroke = s; page().strokes.push(s); dot(ctx, s, active.col);
+      $('#emptyHint').hidden = true;
+    }
+  });
+  cv.addEventListener('pointermove', e => {
+    if (e.pointerType === 'pen' && !penDown) lastPen = performance.now();   // hovering stylus
+    if (e.pointerType === 'touch') {
+      if (ignored.has(e.pointerId)) return;
+      if (touches.has(e.pointerId)) {
+        if (isPalm(e)) {                                   // contact grew: it was a palm
+          touches.delete(e.pointerId); ignored.add(e.pointerId);
+          if (active && active.id === e.pointerId) cancelActive();
+          if (pan) { if (touches.size) startPan(); else endPan(true); }
+          return;
+        }
+        touches.set(e.pointerId, e.clientY);
+        if (pan) {
+          const d = avgY() - pan.a;
+          if (!pan.armed) { if (Math.abs(d) < 10) return; pan.armed = true; startPan(); return; }
+          setScroll(pan.sy - d); return;
+        }
+      }
+    }
+    if (!active || e.pointerId !== active.id) return;
+    const evs = (e.getCoalescedEvents && e.getCoalescedEvents()) || [];
+    let moved = false;
+    for (const ev of (evs.length ? evs : [e])) {
+      const p = pos(ev);
+      if (active.mode === 'erase') { eraseAt(p); continue; }
+      if (active.mode === 'lasso') {
+        const l = active.poly[active.poly.length - 1];
+        if (Math.hypot(p[0] - l[0], p[1] - l[1]) > 2.5) active.poly.push(p);
+        continue;
+      }
+      if (active.mode === 'move') {
+        const dx = p[0] - active.last[0], dy = p[1] - active.last[1];
+        if (dx || dy) { translate(sel.strokes, dx, dy); active.dx += dx; active.dy += dy; active.last = p; moved = true; }
+        continue;
+      }
+      const pts = active.stroke.pts, last = pts[pts.length - 1];
+      if (Math.hypot(p[0] - last[0], p[1] - last[1]) < 0.7) continue;
+      pts.push(p); seg(ctx, active.stroke, pts.length - 1, active.col);
+    }
+    if (active.mode === 'lasso') drawLasso();
+    if (moved) { sel.box = bboxOf(sel.strokes); redraw(); }
+  });
+  function endPointer(e) {
+    if (e.pointerType === 'pen') { penDown = false; lastPen = performance.now(); }
+    if (e.pointerType === 'touch') {
+      if (ignored.delete(e.pointerId)) return;
+      if (touches.has(e.pointerId)) {
+        touches.delete(e.pointerId);
+        if (pan) { if (touches.size) startPan(); else endPan(false); return; }
+      }
+    }
+    if (!active || e.pointerId !== active.id) return;
+    const a = active; active = null;
+    if (a.mode === 'erase') { if (a.removed.length) pushAction({ t: 'erase', items: a.removed }); }
+    else if (a.mode === 'draw') { tail(ctx, a.stroke, a.col); pushAction({ t: 'add', s: a.stroke }); }
+    else if (a.mode === 'lasso') finishLasso(a.poly);
+    else if (a.mode === 'move') {
+      if (a.dx || a.dy) { pushAction({ t: 'move', ss: sel.strokes.slice(), dx: a.dx, dy: a.dy }); refreshSelImage(); }
+      updateSelUI();
+    }
+    save();
+  }
+  cv.addEventListener('pointerup', endPointer);
+  cv.addEventListener('pointercancel', endPointer);
+  cv.addEventListener('contextmenu', e => e.preventDefault());
+
+  /* ---------- Undo / redo ---------- */
+  function pushAction(a) { const h = H(); h.undo.push(a); h.redo.length = 0; syncUI(); markChanged(true); }
+  function undo() {
+    const h = H(), a = h.undo.pop(); if (!a) return;
+    clearSel();
+    const st = page().strokes;
+    if (a.t === 'add') { const k = st.indexOf(a.s); if (k >= 0) st.splice(k, 1); }
+    else if (a.t === 'erase') { for (let j = a.items.length - 1; j >= 0; j--) st.splice(a.items[j].i, 0, a.items[j].s); }
+    else if (a.t === 'clear') { page().strokes = a.prev.slice(); }
+    else if (a.t === 'move') { translate(a.ss, -a.dx, -a.dy); }
+    else if (a.t === 'paste') { for (const x of a.ss) { const k = st.indexOf(x); if (k >= 0) st.splice(k, 1); } }
+    h.redo.push(a); redraw(); syncUI(); save(); markChanged(true);
+  }
+  function redo() {
+    const h = H(), a = h.redo.pop(); if (!a) return;
+    clearSel();
+    const st = page().strokes;
+    if (a.t === 'add') st.push(a.s);
+    else if (a.t === 'erase') { for (const it of a.items) { const k = st.indexOf(it.s); if (k >= 0) st.splice(k, 1); } }
+    else if (a.t === 'clear') page().strokes = [];
+    else if (a.t === 'move') { translate(a.ss, a.dx, a.dy); }
+    else if (a.t === 'paste') st.push(...a.ss);
+    h.undo.push(a); redraw(); syncUI(); save(); markChanged(true);
+  }
+
+  /* ---------- PDF export (vector) ---------- */
+  function hexRGB(h) { const n = parseInt(h.slice(1), 16); return [(n >> 16 & 255) / 255, (n >> 8 & 255) / 255, (n & 255) / 255].map(v => +v.toFixed(3)).join(' '); }
+  const f2 = n => String(Math.round(n * 100) / 100);
+  function pdfChunks(strokes) {
+    const PW = 595.28, PH = 841.89, M = 40;
+    const b = bboxOf(strokes);
+    const xa = Math.max(0, b.x0 - 24), ya = Math.max(0, b.y0 - 24), yEnd = b.y1 + 24;
+    const cw = Math.max(b.x1 + 24 - xa, 640);
+    const s = (PW - 2 * M) / cw, chunkH = (PH - 2 * M) / s;
+    const iv = strokes.map(st => { let a = Infinity, z = -Infinity; for (const p of st.pts) { if (p[1] < a) a = p[1]; if (p[1] > z) z = p[1]; } return [a - st.w * 2, z + st.w * 2]; });
+    const out = []; let y = ya;
+    while (y < yEnd) {
+      const lim = y + chunkH;
+      if (lim >= yEnd) { out.push([y, yEnd]); break; }
+      let best = -Infinity;
+      for (const [, z] of iv) {
+        const c = z + 3;
+        if (c > y + chunkH * 0.5 && c <= lim && c > best && !iv.some(([a2, z2]) => a2 < c && c < z2)) best = c;
+      }
+      if (best === -Infinity) best = lim;
+      out.push([y, best]); y = best;
+    }
+    return out.map(([y0, y1]) => {
+      const L = [`q ${M} ${M} ${f2(PW - 2 * M)} ${f2(PH - 2 * M)} re W n`, `${f2(s)} 0 0 ${f2(-s)} ${f2(M - s * xa)} ${f2(PH - M + s * y0)} cm`, '1 J 1 j'];
+      let lastC = null;
+      strokes.forEach((st, k) => {
+        if (iv[k][1] < y0 - 4 || iv[k][0] > y1 + 4) return;
+        if (st.c !== lastC) { L.push(hexRGB(LIGHT_INKS[st.c]) + ' RG'); lastC = st.c; }
+        const p = st.pts, n = p.length;
+        if (n === 1) { L.push(`${f2(st.w * pf(p[0][2]))} w ${f2(p[0][0])} ${f2(p[0][1])} m ${f2(p[0][0])} ${f2(p[0][1])} l S`); return; }
+        for (let i = 1; i < n; i++) {
+          const a = i === 1 ? p[0] : mid(p[i - 2], p[i - 1]), q = p[i - 1], e = mid(p[i - 1], p[i]);
+          const c1 = [a[0] + 2 / 3 * (q[0] - a[0]), a[1] + 2 / 3 * (q[1] - a[1])], c2 = [e[0] + 2 / 3 * (q[0] - e[0]), e[1] + 2 / 3 * (q[1] - e[1])];
+          L.push(`${f2(st.w * pf(q[2]))} w ${f2(a[0])} ${f2(a[1])} m ${f2(c1[0])} ${f2(c1[1])} ${f2(c2[0])} ${f2(c2[1])} ${f2(e[0])} ${f2(e[1])} c S`);
+        }
+        const a = mid(p[n - 2], p[n - 1]), z = p[n - 1];
+        L.push(`${f2(st.w * pf(z[2]))} w ${f2(a[0])} ${f2(a[1])} m ${f2(z[0])} ${f2(z[1])} l S`);
+      });
+      L.push('Q');
+      return L.join('\n');
+    });
+  }
+  function buildPDF(streams) {
+    const PW = 595.28, PH = 841.89;
+    const objs = ['<< /Type /Catalog /Pages 2 0 R >>', null, '<< /Title (project-notes) /Producer (project-notes) >>'];
+    const kids = [];
+    for (const cs of streams) {
+      const pn = objs.length + 1, cn = objs.length + 2;
+      objs.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${PW} ${PH}] /Contents ${cn} 0 R /Resources << >> >>`);
+      objs.push(`<< /Length ${cs.length} >>\nstream\n${cs}\nendstream`);
+      kids.push(`${pn} 0 R`);
+    }
+    objs[1] = `<< /Type /Pages /Kids [${kids.join(' ')}] /Count ${kids.length} >>`;
+    const parts = ['%PDF-1.4\n']; let len = parts[0].length; const offs = [];
+    objs.forEach((o, i) => { const str = `${i + 1} 0 obj\n${o}\nendobj\n`; offs.push(len); parts.push(str); len += str.length; });
+    parts.push(`xref\n0 ${objs.length + 1}\n0000000000 65535 f \n` + offs.map(o => String(o).padStart(10, '0') + ' 00000 n \n').join(''));
+    parts.push(`trailer\n<< /Size ${objs.length + 1} /Root 1 0 R /Info 3 0 R >>\nstartxref\n${len}\n%%EOF\n`);
+    return new Blob(parts, { type: 'application/pdf' });
+  }
+  function savePDF() {
+    const used = state.pages.filter(p => p.strokes.length);
+    if (!used.length) { toast('Nothing to save yet. Write something first.'); return; }
+    const streams = [];
+    for (const pg of used) streams.push(...pdfChunks(pg.strokes));
+    const d = new Date(), stamp = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    saveBlob(buildPDF(streams), `project-notes-${stamp}.pdf`);
+    toast(`Saved ${streams.length} PDF page${streams.length === 1 ? '' : 's'}.`);
+  }
+
+  /* ---------- Toolbar ---------- */
+  const inksEl = $('#inks'), sizesEl = $('#sizes');
+  INK_NAMES.forEach((n, i) => {
+    const b = document.createElement('button');
+    b.className = 'swatch'; b.setAttribute('aria-label', n + ' ink'); b.title = n;
+    b.style.setProperty('--c', `var(--ink${i})`); b.innerHTML = '<span></span>';
+    b.onclick = () => { state.ink = i; setTool('pen'); };
+    inksEl.append(b);
+  });
+  SIZES.forEach((w, i) => {
+    const b = document.createElement('button');
+    b.className = 'tb size'; b.setAttribute('aria-label', SIZE_NAMES[i] + ' pen'); b.title = SIZE_NAMES[i];
+    const d = Math.round(4 + i * 3.5); b.innerHTML = `<span style="width:${d}px;height:${d}px"></span>`;
+    b.onclick = () => { state.size = i; setTool('pen'); };
+    sizesEl.append(b);
+  });
+  function setTool(t) { if (t !== 'lasso') clearSel(); state.tool = t; syncUI(); save(); }
+  $('#tPen').onclick = () => setTool('pen');
+  $('#tEraser').onclick = () => setTool('eraser');
+  $('#tLasso').onclick = () => setTool('lasso');
+  $('#undo').onclick = undo; $('#redo').onclick = redo;
+  $('#finger').onclick = () => {
+    state.finger = !state.finger; syncUI(); save();
+    toast(state.finger ? 'Finger drawing is on. Scroll with two fingers.' : 'Finger drawing is off. One finger scrolls the page.');
+  };
+  const clearBtn = $('#clear'); let armT;
+  clearBtn.onclick = () => {
+    if (!page().strokes.length) return;
+    if (!clearBtn.classList.contains('armed')) {
+      clearBtn.classList.add('armed'); toast('Tap the bin again to clear this page.');
+      clearTimeout(armT); armT = setTimeout(() => clearBtn.classList.remove('armed'), 2500); return;
+    }
+    clearBtn.classList.remove('armed');
+    clearSel(); pushAction({ t: 'clear', prev: page().strokes.slice() });
+    page().strokes = []; redraw(); save();
+  };
+  function goPage(i) {
+    if (i < 0 || i >= state.pages.length) return;
+    cancelActive(); clearSel(); state.cur = i; redraw(); syncUI(); save();
+  }
+  $('#prev').onclick = () => goPage(state.cur - 1);
+  $('#next').onclick = () => goPage(state.cur + 1);
+  /* Deleting a page leaves a small marker (id → time) so the deletion also reaches other synced devices. */
+  let lastDeleted = null, delArmT;
+  const delBtn = $('#delPage');
+  function deletePage() {
+    cancelActive(); clearSel();
+    const i = state.cur, pg = page(), hadInk = pg.strokes.length > 0;
+    state.pages.splice(i, 1);
+    state.deleted[pg.id] = Date.now();
+    removedPages.add(pg.id);
+    let filler = null;
+    if (!state.pages.length) { filler = newPage(); state.pages.push(filler); markDirty(filler); }
+    state.cur = Math.min(i, state.pages.length - 1);
+    lastDeleted = { pg, i, filler };
+    redraw(); syncUI(); save(); markChanged(false);
+    if (hadInk) toast(`Page ${i + 1} deleted.`, { label: 'Undo', fn: restorePage });
+    else toast('Empty page deleted.');
+  }
+  function restorePage() {
+    if (!lastDeleted) return;
+    const { pg, i, filler } = lastDeleted; lastDeleted = null;
+    cancelActive(); clearSel();
+    delete state.deleted[pg.id]; removedPages.delete(pg.id);
+    pg.t = Date.now(); markDirty(pg);
+    if (filler && state.pages.length === 1 && state.pages[0] === filler && !filler.strokes.length) {
+      state.pages = []; state.deleted[filler.id] = Date.now(); removedPages.add(filler.id);
+    }
+    state.pages.splice(Math.min(i, state.pages.length), 0, pg);
+    state.cur = state.pages.indexOf(pg);
+    redraw(); syncUI(); save(); markChanged(false);
+    toast('Page restored.');
+  }
+  delBtn.onclick = () => {
+    if (!page().strokes.length) { deletePage(); return; }
+    if (!delBtn.classList.contains('armed')) {
+      delBtn.classList.add('armed');
+      toast(`Tap again to delete page ${state.cur + 1}.`);
+      clearTimeout(delArmT); delArmT = setTimeout(() => delBtn.classList.remove('armed'), 2500);
+      return;
+    }
+    clearTimeout(delArmT); delBtn.classList.remove('armed');
+    deletePage();
+  };
+  $('#addPage').onclick = () => { const np = newPage(); np.t = Date.now(); state.pages.splice(state.cur + 1, 0, np); markDirty(np); goPage(state.cur + 1); markChanged(false); };
+
+  $('#pdfBtn').onclick = savePDF;
+
+  function syncUI() {
+    $('#tPen').setAttribute('aria-pressed', state.tool === 'pen');
+    $('#tEraser').setAttribute('aria-pressed', state.tool === 'eraser');
+    $('#tLasso').setAttribute('aria-pressed', state.tool === 'lasso');
+    board.classList.toggle('erasing', state.tool === 'eraser');
+    [...inksEl.children].forEach((b, i) => b.setAttribute('aria-pressed', state.ink === i && state.tool === 'pen'));
+    [...sizesEl.children].forEach((b, i) => b.setAttribute('aria-pressed', state.size === i && state.tool === 'pen'));
+    $('#finger').setAttribute('aria-pressed', !!state.finger);
+    $('#undo').disabled = !H().undo.length; $('#redo').disabled = !H().redo.length;
+    $('#mUndo').disabled = !H().undo.length; $('#mRedo').disabled = !H().redo.length;
+    $('#pasteBtn').disabled = $('#mPaste').disabled = !(clip && clip.length);
+    $('#mPen').setAttribute('aria-pressed', state.tool === 'pen');
+    $('#mEraser').setAttribute('aria-pressed', state.tool === 'eraser');
+    $('#mLasso').setAttribute('aria-pressed', state.tool === 'lasso');
+    $('#mInk').style.setProperty('--c', `var(--ink${state.ink})`);
+    $('#mInk').setAttribute('aria-label', `Ink: ${INK_NAMES[state.ink]}. Tap to change.`);
+    $('#pgLabel').textContent = `${state.cur + 1} / ${state.pages.length}`;
+    $('#prev').disabled = state.cur === 0; $('#next').disabled = state.cur === state.pages.length - 1;
+  }
+
+  document.addEventListener('keydown', e => {
+    const t = e.target; if (t && t.tagName === 'INPUT') return;
+    const mod = e.metaKey || e.ctrlKey, k = e.key.toLowerCase();
+    if (mod && k === 'z') { e.preventDefault(); e.shiftKey ? redo() : undo(); }
+    else if (mod && k === 'y') { e.preventDefault(); redo(); }
+    else if (mod && k === 'c' && sel) { e.preventDefault(); copySel(); }
+    else if (mod && k === 'x' && sel) { e.preventDefault(); cutSel(); }
+    else if (mod && k === 'v' && clip) { e.preventDefault(); pasteClip(); }
+    else if (!mod && (k === 'delete' || k === 'backspace') && sel) { e.preventDefault(); deleteSel(); }
+    else if (k === 'escape') { if (sel) clearSel(); else exitFocus(); }
+    else if (!mod && k === 'p') setTool('pen');
+    else if (!mod && k === 'e') setTool('eraser');
+    else if (!mod && k === 'l') setTool('lasso');
+    else if (!mod && k === 'f') { app.classList.contains('focus') ? exitFocus() : enterFocus(); }
+  });
+
+  /* ---------- Panel ---------- */
+  const wide = matchMedia('(min-width: 861px)');
+  function setPanel(open) {
+    app.classList.toggle('panel-open', open);
+    $('#panelToggle').setAttribute('aria-expanded', open);
+    $('#panelToggle').setAttribute('aria-pressed', open);
+    $('#mCalc').setAttribute('aria-pressed', open);
+  }
+
+  /* Panel size: drag the grip (left edge on tablets, top bar on phones). Saved per device. */
+  const grip = $('#panelGrip'), mainEl = document.querySelector('.main');
+  function applyPanelSize() {
+    if (state.panelW) app.style.setProperty('--pw', state.panelW + 'px'); else app.style.removeProperty('--pw');
+    if (state.panelH) app.style.setProperty('--ph', state.panelH + 'px'); else app.style.removeProperty('--ph');
+  }
+  function sizePanelTo(clientX, clientY) {
+    const r = mainEl.getBoundingClientRect();
+    if (wide.matches) state.panelW = Math.round(Math.max(280, Math.min(r.right - clientX, r.width - 240)));
+    else state.panelH = Math.round(Math.max(r.height * 0.25, Math.min(r.bottom - clientY, r.height - 48)));
+    applyPanelSize();
+  }
+  grip.addEventListener('pointerdown', e => {
+    e.preventDefault(); e.stopPropagation();
+    try { grip.setPointerCapture(e.pointerId); } catch (_) {}
+    grip.classList.add('drag');
+    const move = ev => sizePanelTo(ev.clientX, ev.clientY);
+    const up = () => {
+      grip.classList.remove('drag');
+      grip.removeEventListener('pointermove', move); grip.removeEventListener('pointerup', up); grip.removeEventListener('pointercancel', up);
+      save();
+    };
+    grip.addEventListener('pointermove', move); grip.addEventListener('pointerup', up); grip.addEventListener('pointercancel', up);
+  });
+  grip.addEventListener('dblclick', () => { if (wide.matches) state.panelW = null; else state.panelH = null; applyPanelSize(); save(); });
+  grip.addEventListener('keydown', e => {
+    const r = mainEl.getBoundingClientRect(), pr = $('#panel').getBoundingClientRect(), step = e.shiftKey ? 60 : 20;
+    if (wide.matches && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { e.preventDefault(); sizePanelTo(pr.left + (e.key === 'ArrowLeft' ? -step : step), 0); save(); }
+    if (!wide.matches && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) { e.preventDefault(); sizePanelTo(0, pr.top + (e.key === 'ArrowUp' ? -step : step)); save(); }
+  });
+  applyPanelSize();
+  setPanel(wide.matches);
+  $('#panelToggle').onclick = () => setPanel(!app.classList.contains('panel-open'));
+  $('#panelClose').onclick = () => setPanel(false);
+
+  /* ---------- Full screen writing ---------- */
+  const root = document.documentElement;
+  const fsElement = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+  let panelWasOpen = false, usedFs = false;
+  function enterFocus() {
+    if (app.classList.contains('focus')) return;
+    panelWasOpen = app.classList.contains('panel-open');
+    app.classList.add('focus');
+    setPanel(false);
+    const req = root.requestFullscreen || root.webkitRequestFullscreen;
+    usedFs = false;
+    if (req) {
+      try {
+        const r = req.call(root);
+        usedFs = true;
+        if (r && r.catch) r.catch(() => { usedFs = false; });
+      } catch (_) { usedFs = false; }
+    }
+  }
+  function exitFocus() {
+    if (!app.classList.contains('focus')) return;
+    app.classList.remove('focus');
+    setPanel(panelWasOpen);
+    if (fsElement()) {
+      const ex = document.exitFullscreen || document.webkitExitFullscreen;
+      try { const r = ex && ex.call(document); if (r && r.catch) r.catch(() => {}); } catch (_) {}
+    }
+    usedFs = false;
+  }
+  function onFsChange() { if (!fsElement() && usedFs && app.classList.contains('focus')) { usedFs = false; exitFocus(); } }
+  document.addEventListener('fullscreenchange', onFsChange);
+  document.addEventListener('webkitfullscreenchange', onFsChange);
+  $('#fsBtn').onclick = enterFocus;
+  $('#mExit').onclick = exitFocus;
+  $('#mPen').onclick = () => setTool('pen');
+  $('#mEraser').onclick = () => setTool('eraser');
+  $('#mLasso').onclick = () => setTool('lasso');
+  $('#mUndo').onclick = undo; $('#mRedo').onclick = redo;
+  $('#mCalc').onclick = () => setPanel(!app.classList.contains('panel-open'));
+  $('#mPaste').onclick = pasteClip; $('#pasteBtn').onclick = pasteClip;
+  $('#mInk').onclick = () => { state.ink = (state.ink + 1) % INK_NAMES.length; setTool('pen'); };
+
+  /* ---------- Calculator engine ---------- */
+  const FUNCS = ['asinh', 'acosh', 'atanh', 'asin', 'acos', 'atan', 'sinh', 'cosh', 'tanh', 'sin', 'cos', 'tan', 'sqrt', 'cbrt', 'ln', 'log', 'abs', 'exp'];
+  const CONSTS = ['ans', 'pi', 'e'];
+  const NAMES = [...FUNCS, ...CONSTS, 'x'].sort((a, b) => b.length - a.length);
+
+  function tokenize(src) {
+    const s = src.replace(/[−–]/g, '-').replace(/[×·]/g, '*').replace(/÷/g, '/').replace(/π/g, ' pi ').replace(/√/g, ' sqrt ');
+    const raw = []; let i = 0;
+    while (i < s.length) {
+      const c = s[i];
+      if (/\s/.test(c)) { i++; continue; }
+      if (/[0-9.]/.test(c)) {
+        const m = s.slice(i).match(/^(\d+\.?\d*|\.\d+)/);
+        if (!m) throw new Error('Check the number near “.”');
+        raw.push({ t: 'num', v: parseFloat(m[0]) }); i += m[0].length; continue;
+      }
+      if (/[a-z]/i.test(c)) {
+        const run = s.slice(i).match(/^[a-z]+/i)[0].toLowerCase(); let j = 0;
+        while (j < run.length) {
+          const name = NAMES.find(n => run.startsWith(n, j));
+          if (!name) throw new Error(`Unknown “${run.slice(j)}”`);
+          raw.push({ t: FUNCS.includes(name) ? 'func' : name === 'x' ? 'var' : 'const', v: name }); j += name.length;
+        }
+        i += run.length; continue;
+      }
+      if ('+-*/^()!'.includes(c)) { raw.push({ t: 'op', v: c }); i++; continue; }
+      throw new Error(`Unexpected “${c}”`);
+    }
+    const ends = t => t.t === 'num' || t.t === 'const' || t.t === 'var' || (t.t === 'op' && (t.v === ')' || t.v === '!'));
+    const starts = t => t.t === 'num' || t.t === 'const' || t.t === 'var' || t.t === 'func' || (t.t === 'op' && t.v === '(');
+    const out = [];
+    for (const t of raw) { const p = out[out.length - 1]; if (p && ends(p) && starts(t)) out.push({ t: 'op', v: '*', imp: true }); out.push(t); }
+    return out;
+  }
+  function fact(n) {
+    if (n < 0 || Math.abs(n - Math.round(n)) > 1e-9) throw new Error('Factorial needs a whole number ≥ 0');
+    n = Math.round(n); if (n > 170) return Infinity;
+    let r = 1; for (let k = 2; k <= n; k++) r *= k; return r;
+  }
+  // Turns an expression into a function of x (x is only used by graphs).
+  function compile(src, deg, ans) {
+    const T = tokenize(src); let k = 0;
+    if (!T.length) throw new Error('Empty');
+    const isOp = v => T[k] && T[k].t === 'op' && T[k].v === v;
+    const toRad = x => deg ? x * Math.PI / 180 : x;
+    const fromRad = x => deg ? x * 180 / Math.PI : x;
+    const FN = {
+      sin: x => Math.sin(toRad(x)), cos: x => Math.cos(toRad(x)),
+      tan: x => (deg && Math.abs(((x % 180) + 180) % 180 - 90) < 1e-9) ? NaN : Math.tan(toRad(x)),
+      asin: x => fromRad(Math.asin(x)), acos: x => fromRad(Math.acos(x)), atan: x => fromRad(Math.atan(x)),
+      sinh: Math.sinh, cosh: Math.cosh, tanh: Math.tanh,
+      asinh: Math.asinh, acosh: Math.acosh, atanh: Math.atanh, sqrt: Math.sqrt, cbrt: Math.cbrt,
+      ln: Math.log, log: Math.log10, abs: Math.abs, exp: Math.exp,
+    };
+    function expr() { let f = term(); while (isOp('+') || isOp('-')) { const o = T[k++].v, a = f, b = term(); f = o === '+' ? x => a(x) + b(x) : x => a(x) - b(x); } return f; }
+    function term() { let f = unary(); while (isOp('*') || isOp('/')) { const o = T[k++].v, a = f, b = unary(); f = o === '*' ? x => a(x) * b(x) : x => a(x) / b(x); } return f; }
+    function unary() { if (isOp('-')) { k++; const a = unary(); return x => -a(x); } if (isOp('+')) { k++; return unary(); } return power(); }
+    function power() { const b = postfix(); if (isOp('^')) { k++; const e = unary(); return x => Math.pow(b(x), e(x)); } return b; }
+    function postfix() { let f = primary(); while (isOp('!')) { k++; const a = f; f = x => fact(a(x)); } return f; }
+    function funcArg() {          // sin2x means sin(2x); sin x cos x means sin(x)·cos(x)
+      if (isOp('(')) return primary();
+      let f = power();
+      while (T[k] && T[k].imp && T[k + 1] && T[k + 1].t !== 'func') { k++; const a = f, b = power(); f = x => a(x) * b(x); }
+      return f;
+    }
+    function primary() {
+      const t = T[k++];
+      if (!t) throw new Error('Incomplete');
+      if (t.t === 'num') { const v = t.v; return () => v; }
+      if (t.t === 'var') return x => x;
+      if (t.t === 'const') { const v = t.v === 'pi' ? Math.PI : t.v === 'e' ? Math.E : ans; return () => v; }
+      if (t.t === 'op' && t.v === '(') {
+        const f = expr();
+        if (isOp(')')) k++; else if (k < T.length) throw new Error('Missing “)”');
+        return f;
+      }
+      if (t.t === 'func') { const g = FN[t.v], a = funcArg(); return x => g(a(x)); }
+      throw new Error(`Unexpected “${t.v}”`);
+    }
+    const f = expr();
+    if (k < T.length) throw new Error(T[k].v === ')' ? 'Extra “)”' : `Unexpected “${T[k].v}”`);
+    f.usesX = T.some(t => t.t === 'var');
+    return f;
+  }
+  function evaluate(src, deg, ans) {
+    const f = compile(src, deg, ans);
+    if (f.usesX) throw new Error('x is for graphs. Use the Graph tab.');
+    return f(0);
+  }
+  function fmt(x) {
+    if (Math.abs(x) < 1e-13) x = 0;
+    const a = Math.abs(x); let s;
+    if (a !== 0 && (a >= 1e12 || a < 1e-6)) {
+      const [m, e] = x.toExponential(9).split('e');
+      s = String(parseFloat(m)) + '×10^' + parseInt(e, 10);
+    } else s = String(parseFloat(x.toPrecision(12)));
+    return s.replace(/-/g, '−');
+  }
+  const pretty = s => s.replace(/\*/g, '×').replace(/\//g, '÷').replace(/-/g, '−').replace(/sqrt/gi, '√').replace(/\bpi\b/gi, 'π');
+
+  /* ---------- Calculator UI ---------- */
+  const exprEl = $('#expr'), prevEl = $('#preview'), histEl = $('#hist'), keysEl = $('#keys');
+  let inv = false, justEval = false;
+  const KEYS = [
+    { l: 'Inv', a: 'inv', c: 'fn' },
+    { l: 'sin', i: 'sin(', il: 'sin⁻¹', ii: 'asin(', c: 'fn' },
+    { l: 'cos', i: 'cos(', il: 'cos⁻¹', ii: 'acos(', c: 'fn' },
+    { l: 'tan', i: 'tan(', il: 'tan⁻¹', ii: 'atan(', c: 'fn' },
+    { l: '(', i: '(', c: 'fn' }, { l: ')', i: ')', c: 'fn' },
+    { l: 'ln', i: 'ln(', il: 'eˣ', ii: 'e^(', c: 'fn' },
+    { l: 'log', i: 'log(', il: '10ˣ', ii: '10^(', c: 'fn' },
+    { l: '√', i: '√(', il: 'x²', ii: '^2', c: 'fn' },
+    { l: 'xʸ', i: '^', c: 'fn', aria: 'power' },
+    { l: 'π', i: 'π', c: 'fn' }, { l: 'e', i: 'e', c: 'fn' },
+    { l: '7', i: '7' }, { l: '8', i: '8' }, { l: '9', i: '9' }, { l: '÷', i: '÷', c: 'op', aria: 'divide' },
+    { l: '⌫', a: 'back', c: 'act', aria: 'backspace' }, { l: 'AC', a: 'clear', c: 'act', aria: 'clear' },
+    { l: '4', i: '4' }, { l: '5', i: '5' }, { l: '6', i: '6' }, { l: '×', i: '×', c: 'op', aria: 'times' },
+    { l: '!', i: '!', c: 'fn', aria: 'factorial' }, { l: 'Ans', i: 'Ans', c: 'fn' },
+    { l: '1', i: '1' }, { l: '2', i: '2' }, { l: '3', i: '3' }, { l: '−', i: '−', c: 'op', aria: 'minus' },
+    { l: '=', a: 'eq', c: 'eq', aria: 'equals' },
+    { l: '0', i: '0', c: 'zero' }, { l: '.', i: '.' }, { l: '+', i: '+', c: 'op', aria: 'plus' },
+  ];
+  const keyBtns = KEYS.map(k => {
+    const b = document.createElement('button');
+    b.className = 'key ' + (k.c || ''); b.textContent = k.l; b.type = 'button';
+    if (k.aria) b.setAttribute('aria-label', k.aria);
+    b.addEventListener('pointerdown', e => e.preventDefault());
+    b.onclick = () => press(k);
+    keysEl.append(b); return { k, b };
+  });
+  function paintInv() {
+    keyBtns.forEach(({ k, b }) => {
+      if (k.a === 'inv') b.setAttribute('aria-pressed', inv);
+      else if (k.il) b.textContent = inv ? k.il : k.l;
+    });
+  }
+  function insert(text) {
+    const v = exprEl.value;
+    if (justEval && !v && /^[+−×÷^!]|^\^2/.test(text)) text = 'Ans' + text;
+    justEval = false;
+    const i = exprEl.selectionStart ?? v.length, j = exprEl.selectionEnd ?? v.length;
+    exprEl.value = v.slice(0, i) + text + v.slice(j);
+    const c = i + text.length; exprEl.setSelectionRange(c, c);
+    updatePreview();
+  }
+  function press(k) {
+    if (k.a === 'inv') { inv = !inv; paintInv(); return; }
+    if (k.a === 'clear') { exprEl.value = ''; justEval = false; updatePreview(); return; }
+    if (k.a === 'back') {
+      const v = exprEl.value, i = exprEl.selectionStart ?? v.length, j = exprEl.selectionEnd ?? v.length;
+      if (i !== j) { exprEl.value = v.slice(0, i) + v.slice(j); exprEl.setSelectionRange(i, i); }
+      else if (i > 0) {
+        const m = v.slice(0, i).match(/(asin\(|acos\(|atan\(|sin\(|cos\(|tan\(|log\(|ln\(|Ans|.)$/);
+        const n = m ? m[0].length : 1;
+        exprEl.value = v.slice(0, i - n) + v.slice(i); exprEl.setSelectionRange(i - n, i - n);
+      }
+      updatePreview(); return;
+    }
+    if (k.a === 'eq') { calc(); return; }
+    insert(inv && k.ii ? k.ii : k.i);
+    if (inv && k.ii) { inv = false; paintInv(); }
+  }
+  function updatePreview() {
+    const v = exprEl.value.trim();
+    prevEl.classList.remove('err');
+    if (!v) { prevEl.textContent = ''; return; }
+    try {
+      const r = evaluate(v, state.calc.deg, state.calc.ans);
+      prevEl.textContent = (Number.isFinite(r) && !/^[\d.]+$/.test(v)) ? '= ' + fmt(r) : '';
+    } catch (_) { prevEl.textContent = ''; }
+  }
+  function calc() {
+    const v = exprEl.value.trim(); if (!v) return;
+    let r;
+    try { r = evaluate(v, state.calc.deg, state.calc.ans); }
+    catch (e) { prevEl.textContent = e.message === 'Incomplete' ? 'Finish the expression first' : e.message; prevEl.classList.add('err'); return; }
+    if (!Number.isFinite(r)) { prevEl.textContent = 'Undefined result'; prevEl.classList.add('err'); return; }
+    state.calc.hist.push({ e: pretty(v), r: fmt(r), v: r, d: state.calc.deg }); touchCalc();
+    if (state.calc.hist.length > 60) state.calc.hist.splice(0, state.calc.hist.length - 60);
+    state.calc.ans = r; exprEl.value = ''; prevEl.textContent = ''; justEval = true;
+    renderHist(); save();
+  }
+  function renderHist() {
+    histEl.innerHTML = '';
+    const h = state.calc.hist;
+    if (!h.length) {
+      const d = document.createElement('div'); d.className = 'empty';
+      d.textContent = 'Your results appear here. Tap one to reuse it.';
+      histEl.append(d); return;
+    }
+    const clr = document.createElement('button');
+    clr.className = 'hist-clear'; clr.textContent = 'Clear history';
+    clr.onclick = () => { state.calc.hist = []; renderHist(); save(); touchCalc(); };
+    histEl.append(clr);
+    for (const it of h) {
+      const b = document.createElement('button'); b.className = 'h-item'; b.type = 'button';
+      const e = document.createElement('span'); e.className = 'h-e'; e.textContent = it.e;
+      const r = document.createElement('span'); r.className = 'h-r'; r.textContent = '= ' + it.r;
+      b.append(e, r); b.setAttribute('aria-label', `Reuse ${it.r}`);
+      b.addEventListener('pointerdown', ev => ev.preventDefault());
+      b.onclick = () => { justEval = false; insert(it.r.includes('×10^') ? '(' + it.r + ')' : it.r); };
+      histEl.append(b);
+    }
+    histEl.scrollTop = histEl.scrollHeight;
+  }
+  function paintAngle() {
+    $('#degBtn').setAttribute('aria-pressed', !!state.calc.deg);
+    $('#radBtn').setAttribute('aria-pressed', !state.calc.deg);
+  }
+  function setAngle(deg) { state.calc.deg = deg; paintAngle(); updatePreview(); if (typeof recompile === 'function' && !$('#graphView').hidden) { recompile(); drawPlot(); updateTrace(); } save(); }
+  $('#degBtn').onclick = () => setAngle(true);
+  $('#radBtn').onclick = () => setAngle(false);
+  exprEl.addEventListener('input', () => { justEval = false; updatePreview(); });
+  exprEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); calc(); }
+    else if (e.key === 'Escape') { exprEl.value = ''; updatePreview(); }
+    else if (justEval && !exprEl.value && /^[+\-*/^!]$/.test(e.key)) { e.preventDefault(); insert('Ans' + ({ '-': '−', '*': '×', '/': '÷' }[e.key] || e.key)); }
+  });
+
+  /* ---------- Graph ---------- */
+  const G_INK = [1, 2, 3, 0], SUBS = ['₁', '₂', '₃', '₄'];
+  const plot = $('#plot'), pctx = plot.getContext('2d'), plotwrap = $('#plotwrap'), fnsEl = $('#fns'), traceEl = $('#trace');
+  let PW = 0, PH = 0, pdpr = 1, compiled = [null, null, null, null], traceX = null;
+  const view = Object.assign({ cx: 0, cy: 0, s: 0 }, state.calc.view || {});
+  const gx = px => view.cx + (px - PW / 2) / view.s, gy = py => view.cy - (py - PH / 2) / view.s;
+  const sx = x => PW / 2 + (x - view.cx) * view.s, sy = y => PH / 2 - (y - view.cy) * view.s;
+  const clampS = s => Math.min(1e7, Math.max(1e-4, s));
+  let viewSaveT;
+  const saveView = () => { state.calc.view = { cx: view.cx, cy: view.cy, s: view.s }; clearTimeout(viewSaveT); viewSaveT = setTimeout(save, 400); };
+
+  function recompile() {
+    compiled = state.calc.fns.map((src, i) => {
+      const inp = fnsEl.querySelector(`input[data-i="${i}"]`);
+      const body = (src || '').replace(/^\s*(y|f\s*\(\s*x\s*\))\s*=\s*/i, '');
+      if (inp) { inp.classList.remove('bad'); inp.title = ''; }
+      if (!body.trim()) return null;
+      try { return compile(body, state.calc.deg, state.calc.ans); }
+      catch (e) { if (inp && e.message !== 'Incomplete') { inp.classList.add('bad'); inp.title = e.message; } return null; }
+    });
+  }
+  function rowCount() { let last = -1; state.calc.fns.forEach((s, i) => { if (s.trim()) last = i; }); return Math.min(4, last + 2); }
+  function addRow(i) {
+    const row = document.createElement('div'); row.className = 'fnrow'; row.style.setProperty('--c', `var(--ink${G_INK[i]})`);
+    const lab = document.createElement('label'); lab.htmlFor = 'fn' + i; lab.textContent = `y${SUBS[i]} =`;
+    const inp = document.createElement('input');
+    Object.assign(inp, { id: 'fn' + i, type: 'text', value: state.calc.fns[i], placeholder: i === 0 ? 'e.g. x^2 − 3x + 2' : 'Add a function', autocomplete: 'off', spellcheck: false });
+    inp.dataset.i = i; inp.setAttribute('autocapitalize', 'off'); inp.setAttribute('autocorrect', 'off');
+    inp.addEventListener('input', () => {
+      state.calc.fns[i] = inp.value; recompile(); drawPlot(); updateTrace(); touchCalc();
+      if (fnsEl.children.length < rowCount()) addRow(fnsEl.children.length);
+      save();
+    });
+    const clr = document.createElement('button'); clr.type = 'button'; clr.textContent = '×'; clr.setAttribute('aria-label', `Clear y${SUBS[i]}`);
+    clr.onclick = () => {
+      state.calc.fns[i] = '';
+      const kept = state.calc.fns.filter(s => s.trim());
+      state.calc.fns = kept.concat(['', '', '', '']).slice(0, 4); touchCalc();
+      renderFns(); recompile(); drawPlot(); updateTrace(); save();
+    };
+    row.append(lab, inp, clr); fnsEl.append(row);
+  }
+  function renderFns() { fnsEl.innerHTML = ''; for (let i = 0; i < rowCount(); i++) addRow(i); }
+
+  function niceStep(raw) { const p = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / p; return (n < 1.5 ? 1 : n < 3.5 ? 2 : n < 7.5 ? 5 : 10) * p; }
+  function tickLabel(v, step) {
+    const r = Math.round(v / step) * step, a = Math.abs(r);
+    const s = (a >= 1e6 || (a < 1e-4 && a > 0)) ? r.toExponential(1) : String(parseFloat(r.toPrecision(10)));
+    return s.replace(/-/g, '−');
+  }
+  function sizePlot() {
+    const r = plotwrap.getBoundingClientRect(); if (!r.width || !r.height) return;
+    PW = r.width; PH = r.height; pdpr = window.devicePixelRatio || 1;
+    plot.width = Math.round(PW * pdpr); plot.height = Math.round(PH * pdpr);
+    if (!view.s) view.s = PW / 20;
+    drawPlot();
+  }
+  new ResizeObserver(sizePlot).observe(plotwrap);
+
+  function drawPlot() {
+    if (!PW || $('#graphView').hidden) return;
+    const cs = getComputedStyle(document.documentElement), C = n => cs.getPropertyValue(n).trim();
+    const c = pctx; c.setTransform(pdpr, 0, 0, pdpr, 0, 0);
+    c.fillStyle = C('--paper'); c.fillRect(0, 0, PW, PH);
+    const step = niceStep(80 / view.s);
+    const lead = Math.round(step / Math.pow(10, Math.floor(Math.log10(step))));
+    const minor = step / (lead === 2 ? 4 : 5);
+    const x0 = gx(0), x1 = gx(PW), y0 = gy(PH), y1 = gy(0);
+    const lines = (st, color) => {
+      c.strokeStyle = color; c.lineWidth = 1; c.beginPath();
+      for (let x = Math.ceil(x0 / st) * st; x <= x1; x += st) { const X = Math.round(sx(x)) + 0.5; c.moveTo(X, 0); c.lineTo(X, PH); }
+      for (let y = Math.ceil(y0 / st) * st; y <= y1; y += st) { const Y = Math.round(sy(y)) + 0.5; c.moveTo(0, Y); c.lineTo(PW, Y); }
+      c.stroke();
+    };
+    lines(minor, C('--grid')); lines(step, C('--grid-major'));
+    // axes
+    c.strokeStyle = C('--muted'); c.lineWidth = 1.5; c.beginPath();
+    const AX = sx(0), AY = sy(0);
+    if (AY >= 0 && AY <= PH) { c.moveTo(0, AY); c.lineTo(PW, AY); }
+    if (AX >= 0 && AX <= PW) { c.moveTo(AX, 0); c.lineTo(AX, PH); }
+    c.stroke();
+    // labels
+    c.fillStyle = C('--muted'); c.font = '11px "Atkinson Hyperlegible", system-ui, sans-serif';
+    const ly = Math.min(Math.max(AY + 4, 4), PH - 15);
+    c.textAlign = 'center'; c.textBaseline = 'top';
+    for (let x = Math.ceil(x0 / step) * step; x <= x1; x += step) {
+      if (Math.abs(x) < step / 2) continue;
+      c.fillText(tickLabel(x, step), sx(x), ly);
+    }
+    const lx = Math.min(Math.max(AX - 5, 34), PW - 50);
+    c.textAlign = 'right'; c.textBaseline = 'middle';
+    for (let y = Math.ceil(y0 / step) * step; y <= y1; y += step) {
+      if (Math.abs(y) < step / 2) continue;
+      const Y = sy(y); if (Y < 8 || Y > PH - 8) continue;
+      c.fillText(tickLabel(y, step), lx, Y);
+    }
+    if (AX >= 0 && AX <= PW && AY >= 0 && AY <= PH) { c.textBaseline = 'top'; c.fillText('0', AX - 5, AY + 4); }
+    // curves
+    compiled.forEach((f, i) => {
+      if (!f) return;
+      c.strokeStyle = C('--ink' + G_INK[i]); c.lineWidth = 2.2; c.lineJoin = 'round'; c.lineCap = 'round'; c.beginPath();
+      let on = false, prev = 0;
+      for (let px = 0; px <= PW; px += 0.5) {
+        let y; try { y = f(gx(px)); } catch (_) { y = NaN; }
+        if (!Number.isFinite(y)) { on = false; continue; }
+        const Y = Math.min(1e5, Math.max(-1e5, sy(y)));
+        if (on && Math.abs(Y - prev) > PH && (Y < 0 || Y > PH || prev < 0 || prev > PH)) on = false;
+        if (on) c.lineTo(px, Y); else { c.moveTo(px, Y); on = true; }
+        prev = Y;
+      }
+      c.stroke();
+    });
+    // trace marker
+    if (traceX !== null) {
+      const X = sx(traceX);
+      if (X >= 0 && X <= PW) {
+        c.save(); c.setLineDash([4, 4]); c.strokeStyle = C('--muted'); c.lineWidth = 1;
+        c.beginPath(); c.moveTo(X, 0); c.lineTo(X, PH); c.stroke(); c.restore();
+        compiled.forEach((f, i) => {
+          if (!f) return; let y; try { y = f(traceX); } catch (_) { return; }
+          if (!Number.isFinite(y)) return;
+          const Y = sy(y); if (Y < -10 || Y > PH + 10) return;
+          c.beginPath(); c.arc(X, Y, 4.5, 0, Math.PI * 2); c.fillStyle = C('--ink' + G_INK[i]); c.fill();
+          c.lineWidth = 2; c.strokeStyle = C('--paper'); c.stroke();
+        });
+      }
+    }
+  }
+  function updateTrace() {
+    traceEl.textContent = '';
+    if (traceX === null) { traceEl.textContent = 'Tap the graph to read values. Drag to move, pinch or scroll to zoom.'; return; }
+    const xs = document.createElement('span'); xs.textContent = `x = ${fmt(+traceX.toPrecision(6))}`; traceEl.append(xs);
+    let any = false;
+    compiled.forEach((f, i) => {
+      if (!f) return; any = true;
+      let y; try { y = f(traceX); } catch (_) { y = NaN; }
+      const sp = document.createElement('span'); sp.className = 'tv'; sp.style.setProperty('--c', `var(--ink${G_INK[i]})`);
+      sp.textContent = `y${SUBS[i]} = ${Number.isFinite(y) ? fmt(+y.toPrecision(8)) : 'undefined'}`;
+      traceEl.append(sp);
+    });
+    if (!any) { const sp = document.createElement('span'); sp.className = 'tv'; sp.textContent = 'Enter a function to read its value.'; traceEl.append(sp); }
+  }
+  function zoomAt(px, py, f) {
+    const X = gx(px), Y = gy(py);
+    view.s = clampS(view.s * f);
+    view.cx = X - (px - PW / 2) / view.s; view.cy = Y + (py - PH / 2) / view.s;
+    drawPlot(); saveView();
+  }
+  const gp = new Map(); let gstart = null, tap = null;
+  const gptr = e => { const r = plot.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; };
+  function gsnap() {
+    const p = [...gp.values()];
+    if (p.length === 1) return { mode: 'pan', x: p[0].x, y: p[0].y, cx: view.cx, cy: view.cy };
+    if (p.length >= 2) {
+      const mx = (p[0].x + p[1].x) / 2, my = (p[0].y + p[1].y) / 2;
+      return { mode: 'pinch', d: Math.max(1, Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y)), s: view.s, wx: gx(mx), wy: gy(my) };
+    }
+    return null;
+  }
+  plot.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'touch' && isPalm(e)) return;
+    e.preventDefault();
+    try { plot.setPointerCapture(e.pointerId); } catch (_) {}
+    const p = gptr(e); gp.set(e.pointerId, p);
+    tap = gp.size === 1 ? { x: p.x, y: p.y } : null;
+    gstart = gsnap();
+  });
+  plot.addEventListener('pointermove', e => {
+    if (!gp.has(e.pointerId) || !gstart) return;
+    const p = gptr(e); gp.set(e.pointerId, p);
+    if (tap && Math.hypot(p.x - tap.x, p.y - tap.y) > 6) tap = null;
+    if (tap) return;
+    const pts = [...gp.values()];
+    if (gstart.mode === 'pan' && pts.length === 1) {
+      view.cx = gstart.cx - (p.x - gstart.x) / view.s; view.cy = gstart.cy + (p.y - gstart.y) / view.s;
+    } else if (gstart.mode === 'pinch' && pts.length >= 2) {
+      const mx = (pts[0].x + pts[1].x) / 2, my = (pts[0].y + pts[1].y) / 2;
+      view.s = clampS(gstart.s * Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y) / gstart.d);
+      view.cx = gstart.wx - (mx - PW / 2) / view.s; view.cy = gstart.wy + (my - PH / 2) / view.s;
+    }
+    drawPlot();
+  });
+  function gend(e) {
+    if (!gp.has(e.pointerId)) return;
+    gp.delete(e.pointerId);
+    if (tap && e.type === 'pointerup' && !gp.size) { traceX = gx(tap.x); drawPlot(); updateTrace(); }
+    tap = null; gstart = gsnap(); saveView();
+  }
+  plot.addEventListener('pointerup', gend);
+  plot.addEventListener('pointercancel', gend);
+  plot.addEventListener('wheel', e => { e.preventDefault(); const p = gptr(e); zoomAt(p.x, p.y, Math.exp(-e.deltaY * 0.0015)); }, { passive: false });
+  $('#zIn').onclick = () => zoomAt(PW / 2, PH / 2, 1.5);
+  $('#zOut').onclick = () => zoomAt(PW / 2, PH / 2, 1 / 1.5);
+  $('#zHome').onclick = () => { view.cx = 0; view.cy = 0; view.s = PW / 20; traceX = null; drawPlot(); updateTrace(); saveView(); };
+  $('#gCopy').onclick = async () => {
+    if (!compiled.some(Boolean)) { toast('Enter a function first.'); return; }
+    const blobP = new Promise(res => plot.toBlob(res, 'image/png'));
+    try {
+      await navigator.clipboard.write([new ClipboardItem({ 'image/png': blobP })]);
+      toast('Graph copied. Paste it into your chat or document.');
+    } catch (_) {
+      const b = await blobP;
+      if (b) { saveBlob(b, 'graph.png'); toast('This browser can’t copy images, so the graph was saved instead.'); }
+    }
+  };
+  matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', drawPlot);
+
+  function setTab(t) {
+    state.calc.tab = t;
+    $('#tabCalc').setAttribute('aria-selected', t === 'calc'); $('#tabGraph').setAttribute('aria-selected', t === 'graph');
+    $('#calcView').hidden = t !== 'calc'; $('#graphView').hidden = t !== 'graph';
+    app.classList.toggle('graph-mode', t === 'graph');
+    if (t === 'graph') { renderFns(); recompile(); updateTrace(); requestAnimationFrame(sizePlot); }
+    save();
+  }
+  $('#tabCalc').onclick = () => setTab('calc');
+  $('#tabGraph').onclick = () => setTab('graph');
+
+
+  /* ---------- GitHub sync ---------- */
+  // Notes are stored as one JSON file in the user's own (private) repository.
+  // The token lives only in this browser's storage and is never written into the notes file.
+  const CFG_KEY = KEY + '.github';
+  const GH = 'https://api.github.com';
+  let cfg = null;
+  try { const c = JSON.parse(localStorage.getItem(CFG_KEY) || 'null'); if (c && c.token && c.owner && c.repo) cfg = c; } catch (_) {}
+  const saveCfg = () => { try { cfg ? localStorage.setItem(CFG_KEY, JSON.stringify(cfg)) : localStorage.removeItem(CFG_KEY); } catch (_) {} };
+  let syncing = false, syncAgain = false, syncT = null, syncState = 'off', syncMsg = '', changes = 0, publicOk = false;
+  const syncBtn = $('#syncBtn'), syncDot = $('#syncDot'), dlg = $('#syncDlg');
+
+  function b64encode(str) {
+    const bytes = new TextEncoder().encode(str); let bin = '';
+    for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return btoa(bin);
+  }
+  function b64decode(b64) {
+    const bin = atob(b64.replace(/\s/g, '')), bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
+  }
+  const contentsPath = c => `/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.repo)}/contents/${c.path.split('/').map(encodeURIComponent).join('/')}`;
+  function ghFetch(c, path, opts = {}) {
+    const headers = { Authorization: 'Bearer ' + c.token, Accept: opts.accept || 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+    if (opts.body) headers['Content-Type'] = 'application/json';
+    return fetch(GH + path, { method: opts.method || 'GET', body: opts.body, headers, cache: 'no-store' });
+  }
+  async function httpErr(r) {
+    let m = ''; try { m = (await r.json()).message || ''; } catch (_) {}
+    if (r.status === 401) return new Error('GitHub rejected the token. It may have expired. Disconnect, then connect with a new token.');
+    if (r.status === 403 && /rate limit/i.test(m)) return new Error('GitHub’s rate limit was reached. Sync will try again later.');
+    if (r.status === 403 || r.status === 404) return new Error('The token can’t save to this repository. Give it Contents: Read and write access to this repository.');
+    return new Error(`GitHub error ${r.status}${m ? ': ' + m : ''}`);
+  }
+  async function ghGet() {
+    const p = contentsPath(cfg), r = await ghFetch(cfg, p);
+    if (r.status === 404) return null;
+    if (!r.ok) throw await httpErr(r);
+    const j = await r.json();
+    if (Array.isArray(j)) throw new Error(`“${cfg.path}” is a folder on GitHub. Choose a file name instead.`);
+    let text;
+    if (j.encoding === 'base64' && j.content) text = b64decode(j.content);
+    else { const r2 = await ghFetch(cfg, p, { accept: 'application/vnd.github.raw+json' }); if (!r2.ok) throw await httpErr(r2); text = await r2.text(); }
+    return { sha: j.sha, text };
+  }
+  async function ghPut(text, sha) {
+    const stamp = new Date().toISOString().slice(0, 16).replace('T', ' ');
+    const body = { message: `Update notes ${stamp}`, content: b64encode(text) };
+    if (sha) body.sha = sha;
+    const r = await ghFetch(cfg, contentsPath(cfg), { method: 'PUT', body: JSON.stringify(body) });
+    if (r.status === 409 || r.status === 422) {
+      let m = ''; try { m = (await r.json()).message || ''; } catch (_) {}
+      if (r.status === 409 || /sha/i.test(m)) { const e = new Error('conflict'); e.conflict = true; throw e; }
+      throw new Error(`GitHub didn’t accept the file${m ? ': ' + m : ''}.`);
+    }
+    if (!r.ok) throw await httpErr(r);
+    return (await r.json()).content.sha;
+  }
+
+  // One page per line, so GitHub stores small changes efficiently.
+  function payloadStr() {
+    const head = JSON.stringify({ app: 'project-notes', v: 2, deleted: state.deleted, calc: { t: state.calc.t || 0, hist: state.calc.hist, fns: state.calc.fns } });
+    const pages = state.pages.map(p => JSON.stringify({ id: p.id, t: p.t || 0 }).slice(0, -1) + ',"strokes":' + encPage(p) + '}');
+    return head.slice(0, -1) + ',"pages":[\n' + pages.join(',\n') + '\n]}\n';
+  }
+  // Merge: pages are matched by id and the most recently edited version wins.
+  function applyRemote(data) {
+    if (!data || data.app !== 'project-notes' || !Array.isArray(data.pages)) throw new Error(`“${cfg.path}” on GitHub isn’t a project-notes file. Choose another file name.`);
+    clearSel();
+    const curId = page().id, local = new Map(state.pages.map(p => [p.id, p])), out = [];
+    // Combine deletion markers from both sides; a page stays only if it was edited after it was deleted.
+    const tomb = Object.assign({}, state.deleted);
+    if (data.deleted && typeof data.deleted === 'object') for (const [id, t] of Object.entries(data.deleted)) if (!(tomb[id] >= +t)) tomb[id] = +t;
+    const keep = p => !(tomb[p.id] >= (p.t || 0));
+    for (const rp of data.pages) {
+      if (!rp || !rp.id || !Array.isArray(rp.strokes)) continue;
+      const lp = local.get(rp.id);
+      let win;
+      if (lp) { local.delete(rp.id); win = (rp.t || 0) > (lp.t || 0) ? { id: rp.id, t: rp.t || 0, strokes: rp.strokes.map(NoteStore.decStroke), sy: lp.sy || 0 } : lp; }
+      else win = { id: rp.id, t: rp.t || 0, strokes: rp.strokes.map(NoteStore.decStroke), sy: 0 };
+      if (keep(win)) out.push(win);
+    }
+    for (const lp of local.values()) if ((lp.strokes.length || lp.t) && keep(lp)) out.push(lp);
+    for (const p of out) if (tomb[p.id] !== undefined) delete tomb[p.id];
+    state.deleted = tomb;
+    if (!out.length) out.push(newPage());
+    state.pages = out;
+    const ci = out.findIndex(p => p.id === curId);
+    state.cur = ci >= 0 ? ci : Math.min(state.cur, out.length - 1);
+    const rc = data.calc;
+    if (rc && (rc.t || 0) > (state.calc.t || 0)) {
+      state.calc.t = rc.t;
+      if (Array.isArray(rc.hist)) state.calc.hist = rc.hist;
+      if (Array.isArray(rc.fns) && rc.fns.length === 4) state.calc.fns = rc.fns.map(s => String(s || ''));
+      renderHist();
+      if (!$('#graphView').hidden) { renderFns(); recompile(); drawPlot(); updateTrace(); }
+    }
+    allDirty = true;
+    redraw(); syncUI(); save();
+  }
+
+  function setSync(s, msg) {
+    syncState = s; syncMsg = msg || '';
+    syncBtn.dataset.state = s;
+    const t = { off: 'Sync with GitHub', ok: 'Synced with GitHub', pending: 'Changes not synced yet', syncing: 'Syncing with GitHub…', error: syncMsg };
+    syncBtn.title = t[s] || 'Sync with GitHub'; syncBtn.setAttribute('aria-label', syncBtn.title);
+    if (dlg.open) renderDlg();
+  }
+  function scheduleSync(ms = 12000) { if (!cfg) return; clearTimeout(syncT); syncT = setTimeout(sync, ms); }
+  function markChanged(pageEdited) {
+    if (pageEdited) { page().t = Date.now(); markDirty(page()); }
+    changes++;
+    if (cfg && !syncing) setSync('pending');
+    scheduleSync();
+  }
+  function touchCalc() { state.calc.t = Date.now(); markChanged(false); }
+
+  async function sync() {
+    if (!cfg) return;
+    if (syncing) { syncAgain = true; return; }
+    clearTimeout(syncT);
+    syncing = true; setSync('syncing');
+    const startChanges = changes;
+    try {
+      for (let attempt = 0; ; attempt++) {
+        const remote = await ghGet();
+        if (remote && remote.sha !== cfg.sha) {
+          let data; try { data = JSON.parse(remote.text); } catch (_) { throw new Error(`“${cfg.path}” on GitHub isn’t valid notes data. Choose another file name.`); }
+          while (active) await new Promise(r => setTimeout(r, 250));   // never merge mid-stroke
+          applyRemote(data);
+        }
+        while (active) await new Promise(r => setTimeout(r, 250));
+        const text = payloadStr();
+        if (remote && text === remote.text) { cfg.sha = remote.sha; break; }
+        try { cfg.sha = await ghPut(text, remote && remote.sha); break; }
+        catch (e) { if (e.conflict && attempt < 2) continue; throw e; }
+      }
+      cfg.at = Date.now(); saveCfg();
+      setSync(changes === startChanges ? 'ok' : 'pending');
+    } catch (e) {
+      const offline = e instanceof TypeError;
+      const msg = offline ? 'Can’t reach GitHub. Your notes are safe on this device and will sync when you’re online.' : (e.message || 'Sync failed.');
+      if (syncState !== 'error' || syncMsg !== msg) toast(msg);
+      setSync('error', msg);
+    } finally {
+      syncing = false;
+      if (syncAgain) { syncAgain = false; sync(); }
+      else if (syncState === 'pending') scheduleSync();
+    }
+  }
+
+  function ago(t) {
+    const s = Math.round((Date.now() - t) / 1000);
+    if (s < 45) return 'just now';
+    if (s < 3600) return `${Math.round(s / 60)} min ago`;
+    if (s < 86400) return `${Math.round(s / 3600)} h ago`;
+    return new Date(t).toLocaleString();
+  }
+  const fmtBytes = b => b < 1024 * 1024 ? `${Math.max(1, Math.round(b / 1024))} KB` : `${(b / 1048576).toFixed(1)} MB`;
+  function renderDlg() {
+    const on = !!cfg;
+    const bytes = state.pages.reduce((n, p) => n + encPage(p).length, 0) + JSON.stringify(state.calc).length;
+    $('#storeInfo').textContent = `Notes stored on this device: ${fmtBytes(bytes)}.`;
+    $('#syncSetup').hidden = on; $('#syncInfo').hidden = !on;
+    $('#ghConnect').hidden = on; $('#ghSyncNow').hidden = !on; $('#ghDisconnect').hidden = !on;
+    if (on) {
+      $('#syncWhere').textContent = `${cfg.owner}/${cfg.repo} › ${cfg.path}`;
+      $('#syncWhen').textContent = syncState === 'syncing' ? 'Syncing now…' : cfg.at ? `Last synced ${ago(cfg.at)}.` : 'Not synced yet.';
+      $('#syncErr').textContent = syncState === 'error' ? syncMsg : '';
+      $('#ghSyncNow').disabled = syncState === 'syncing';
+    }
+  }
+  syncBtn.onclick = () => { $('#syncErr').textContent = ''; renderDlg(); dlg.showModal(); };
+  $('#dlgClose').onclick = () => dlg.close();
+  $('#ghSyncNow').onclick = () => sync();
+  $('#ghDisconnect').onclick = () => {
+    cfg = null; saveCfg(); clearTimeout(syncT); setSync('off'); renderDlg();
+    toast('Disconnected. Your notes stay on this device, and the token was removed.');
+  };
+  $('#ghConnect').onclick = async () => {
+    const err = m => { $('#syncErr').textContent = m; };
+    const repoIn = $('#ghRepo').value.trim().replace(/^https?:\/\/github\.com\//i, '').replace(/\.git$/i, '').replace(/\/+$/, '');
+    const m = repoIn.match(/^([\w.-]+)\/([\w.-]+)$/);
+    if (!m) return err('Enter the repository as username/repository-name.');
+    const token = $('#ghToken').value.trim();
+    if (!token) return err('Paste your access token.');
+    const path = ($('#ghPath').value.trim() || 'project-notes.json').replace(/^\/+/, '');
+    const btn = $('#ghConnect'); btn.disabled = true; btn.textContent = 'Connecting…'; err('');
+    const c = { token, owner: m[1], repo: m[2], path, sha: null, at: 0 };
+    try {
+      let r;
+      try { r = await ghFetch(c, `/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.repo)}`); }
+      catch (_) { throw new Error('Can’t reach GitHub. Check your internet connection.'); }
+      if (r.status === 401) throw new Error('GitHub rejected this token. Check you copied all of it and that it hasn’t expired.');
+      if (r.status === 404) throw new Error('Repository not found, or the token isn’t allowed to use it.');
+      if (!r.ok) throw await httpErr(r);
+      const info = await r.json();
+      if (info.private === false && !publicOk) {
+        publicOk = true;
+        throw new Error('This repository is public, so anyone could read your notes. Use a private repository, or tap Connect again to use this one anyway.');
+      }
+      cfg = c; saveCfg(); $('#ghToken').value = '';
+      await sync();
+      if (syncState === 'error') { renderDlg(); return; }
+      dlg.close(); toast('Connected. Your notes now sync with GitHub.');
+    } catch (e) { err(e.message); }
+    finally { btn.disabled = false; btn.textContent = 'Connect'; }
+  };
+  document.addEventListener('visibilitychange', () => {
+    if (!cfg) return;
+    if (document.hidden) { if (syncState === 'pending') sync(); }
+    else sync();
+  });
+  window.addEventListener('online', () => { if (cfg && syncState !== 'ok') sync(); });
+  if (cfg) { setSync('syncing'); setTimeout(sync, 0); } else setSync('off');
+
+  if (allDirty) save();
+  syncUI(); paintInv(); paintAngle(); renderHist(); setTab(state.calc.tab === 'graph' ? 'graph' : 'calc');
+}
+</script>
+</body>
+</html>
